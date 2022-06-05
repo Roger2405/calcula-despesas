@@ -1,3 +1,7 @@
+:root {
+    --azul-principal: rgb(94, 173, 184);
+}
+
 
 body {
     background-color: aliceblue;
@@ -38,7 +42,14 @@ input {
     flex-direction: column;
 }
 
-
+.custo-total {
+    width: 100%;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: 3rem;
+    display: flex;
+    justify-content: space-around;
+}
 
 @media  screen and (max-width:768px) {
     body {

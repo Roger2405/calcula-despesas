@@ -60,28 +60,20 @@
                         </div>
                     </div>
                 </div>-->
-                <div class="formulario__tipo formulario-inativo">
-                    <div class="formulario__tipo--ingrediente formulario-inativo">
-                        <div class="formulario__campo">
-                            <label for="quantidade">Quantidade utilizada</label>
-                            <input type="number" id="quantidade" placeholder="Quantidade utilizada">
-                        </div>
-                        <div class="formulario__campo">
-                            <label for="preco">Preço/Qtd</label>
-                            <div>
-                                <input type="text" id="preco-ingrediente" data-tipo="preco" placeholder="Preço">
-                                <input type="number" id="quantidade-preco" placeholder="Qtd.">
-                            </div>
+                <div class="formulario__tipo formulario-inativo">          
+                    <div class="formulario__campo">
+                        <label for="quantidade">Quantidade utilizada</label>
+                        <input type="number" id="quantidade-usada" data-tipo="quantidade-usada" placeholder="Quantidade utilizada">
+                    </div>
+                    <div class="formulario__campo">
+                        <label for="preco">Preço/Quantidade</label>
+                        <div>
+                            <input type="text" id="preco" data-tipo="preco" placeholder="Preço" required>
+                            <input type="number" id="quantidade-preco" placeholder="1 (padrão)">
                         </div>
                     </div>
-                    <div class="formulario__tipo--embalagem formulario-inativo">
-                        <div class="formulario__campo">
-                            <label for="valor-embalagem">Valor unitário</label>
-                            <input type="text" id="preco-embalagem" data-tipo="preco" placeholder="Valor unitário">
-                        </div>
-                    </div>
+                    <button class="formulario__botao">Adicionar</button>
                 </div>
-                <button class="formulario__botao">Adicionar</button>
             </form>
             <!--***************TABELAS**************-->
             <!--nome, quantidadeUtilizada, precoUnitario, quantidadePorProduto, custoPorProduto-->
@@ -92,23 +84,29 @@
                 <h3 class="tabela__titulo">Ingredientes</h3>
                 <tr class="tabela__cabecalho">
                     <th class="tabela__cabecalho--nome">Nome</th>
-                    <th class="tabela__cabecalho--quantidadeUtilizada">Quantidade Utilizada</th>
                     <th class="tabela__cabecalho--precoUnitario">Preço unitário</th>
                     <th class="tabela__cabecalho--quantidadePorProduto">Quantidade por Produto</th>
                     <th class="tabela__cabecalho--custoPorProduto">Custo por Produto</th>
                 </tr>
             </table>    
+            <div class="custo-total">
+                <p>Custo total de ingredientes: </p>
+                <b class="custo-total--valor custo-ingredientes">00,00</b>
+            </div>
             <table class="tabela tabela__embalagens">
                 <h3 class="tabela__titulo">Embalagens</h3>
                 <tr class="tabela__cabecalho">
                     <th class="tabela__cabecalho--nome">Nome</th>
-                    <th class="tabela__cabecalho--quantidadeUtilizada">Quantidade Utilizada</th>
                     <th class="tabela__cabecalho--precoUnitario">Preço unitário</th>
                     <th class="tabela__cabecalho--quantidadePorProduto">Quantidade por Produto</th>
                     <th class="tabela__cabecalho--custoPorProduto">Custo por Produto</th>
                 </tr>
             </table>
-
+            <div class="custo-total">
+                <p>Custo total de embalagens: </p>
+                <b class="custo-total--valor custo-embalagens">0000</b>
+            </div>
+            
 
                 <div class="formulario__campo">
                     <label for="nome-produto">Nome do produto</label>
@@ -119,6 +117,6 @@
     <footer>
         
     </footer>
-    <script src="./js/form.js" type="module"></script>
+    <script src="./js/formulario/form.js" type="module"></script>
 </body>
 </html>

@@ -10,8 +10,13 @@
     text-transform: uppercase;
 }
 .tabela__cabecalho {
-    background-color: gray;
+    background-color: var(--azul-principal);
+    color: white;
 }
 .tabela__cabecalho--nome {
     width: 50%;
+}
+
+@media screen and (max-width) {
+    
 }

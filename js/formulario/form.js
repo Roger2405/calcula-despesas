@@ -1,7 +1,13 @@
 const inputs = document.querySelectorAll('input');
 
+var quantidadeDeProdutos = document.querySelector('#quantidade-produtos').value;
+
+
 const inputQuantidadeDeProdutos = document.querySelector('#quantidade-produtos');
-var quantidadeDeProdutos;
+
+var formulario = document.querySelector('form');
+var formularioTipoDiv = document.querySelector('.formulario__tipo');
+resetarFormulario();
 
 var formularioNome = document.querySelector('#nome-despesa');
 var formularioTipoDespesa = document.querySelector('#tipo-despesa');
@@ -14,11 +20,22 @@ inputQuantidadeDeProdutos.addEventListener('change', function() {
     console.log(quantidadeDeProdutos);
     //atualizarConta();
 })
+function resetarFormulario(){
+    formulario.reset();
+    formularioTipoDiv.classList.add('formulario-inativo');
+}
 
 formularioTipoDespesa.addEventListener('change', function() {
+    tipoDespesa = formularioTipoDespesa.value;
+    if(formularioTipoDespesa.value == 'ingrediente' | formularioTipoDespesa.value == 'embalagem') {
+        formularioTipoDiv.classList.remove('formulario-inativo');
+    }
+    else {
+        formularioTipoDiv.classList.add('formulario-inativo');
+    }
+    /*
     var formularioIngrediente = document.querySelector('.formulario__tipo--ingrediente');
     var formularioEmbalagem = document.querySelector('.formulario__tipo--embalagem');
-    var formularioTipoDiv = document.querySelector('.formulario__tipo');
 
     if(formularioTipoDespesa.value == 'ingrediente') {
         formularioIngrediente.classList.remove('formulario-inativo');
@@ -38,6 +55,8 @@ formularioTipoDespesa.addEventListener('change', function() {
     tipoDespesa = formularioTipoDespesa.value;
     console.log('Tipo de dispesa: ' + tipoDespesa)
     formularioTipoDiv.classList.remove('formulario-inativo');
+    */
+    
 })
 
 var nomeDespesa;
@@ -51,70 +70,74 @@ var quantidadePorProduto;
 
 var botaoSubmit = document.querySelector('.formulario__botao');
 botaoSubmit.addEventListener('click', event =>{
-    event.preventDefault();
-    
-    
     nomeDespesa = document.querySelector('#nome-despesa').value;
+    quantidade = document.querySelector('#quantidade-preco').value;
+    quantidadeUtilizada = document.querySelector('#quantidade-usada').value;
     var custoPorProduto;
-    if(formularioTipoDespesa.value == 'ingrediente') {
-        quantidadeUtilizada = document.querySelector('#quantidade-usada').value;
-
-        preco = document.querySelector('#preco-ingrediente').value;
-        quantidade = document.querySelector('#quantidade-preco').value;
+    if(tipoDespesa == 'ingrediente') {
+        
+        //preco = document.querySelector('#preco-ingrediente').value;
+        preco = document.querySelector('#preco').value;
         precoUnitario = preco/quantidade;
         
-        custoPorProduto = ((preco/quantidade) * quantidadeUtilizada) / 15;
+        custoPorProduto = ((precoUnitario) * quantidadeUtilizada) / 15;
+
+        console.log(`quantidadeUtilizada ${quantidadeUtilizada}`);
     }
-    else if(formularioTipoDespesa.value == 'embalagem') {
-        preco = document.querySelector('#preco-embalagem').value;
-        precoUnitario = preco/1;
-
-        quantidadePorProduto = 1; 
-
+    else if(tipoDespesa == 'embalagem') {
+        //preco = document.querySelector('#preco-embalagem').value;
+        preco = document.querySelector('#preco').value;
+        precoUnitario = preco/quantidade;
+        
+        
         custoPorProduto = ((preco/1) * 15) / 15;
-
+        
     }
     
-    criarTabela(nomeDespesa, quantidadeUtilizada, precoUnitario, quantidadePorProduto, custoPorProduto)
+    quantidadePorProduto = quantidadeUtilizada / quantidadeDeProdutos; 
+    criarTabela(nomeDespesa, precoUnitario, quantidadePorProduto, custoPorProduto);
+    
+    resetarFormulario();
 })
 
 
 
-function criarTabela(nome, quantidadeUtilizada, precoUnitario, quantidadePorProduto, custoPorProduto) {
+function criarTabela(nome, precoUnitario, quantidadePorProduto, custoPorProduto) {
     //criando elementos
     var tdNome = document.createElement('td');
-    var tdQtdUsada = document.createElement('td');
     var tdPrecoUnitario = document.createElement('td');
     var tdQtdPorProduto = document.createElement('td');
     var tdCustoPorProduto = document.createElement('td');
     //adicionando classes
 
     tdNome.classList.add('tabela__linha--nome');
-    tdQtdUsada.classList.add('tabela__linha--quantidadeUtilizada');
     tdPrecoUnitario.classList.add('tabela__linha--precoUnitario')
     tdQtdPorProduto.classList.add('tabela__linha--quantidadePorProduto')
     tdCustoPorProduto.classList.add('tabela__linha--custoPorProduto')
     //colocando dados nos td
+    const formatar = function(number){
+        return new Intl.NumberFormat('pt-br', {style: 'currency',currency: 'BRL', minimumFractionDigits: 2}).format(number);
+    };
     tdNome.textContent = nome;
-    tdQtdUsada.textContent = quantidadeUtilizada;
-    tdPrecoUnitario.textContent = precoUnitario;
-    tdQtdPorProduto.textContent = quantidadePorProduto;
-    tdCustoPorProduto.textContent = custoPorProduto;
+    tdPrecoUnitario.textContent = formatar(precoUnitario);
+    console.log(quantidadePorProduto);
+    tdQtdPorProduto.textContent = quantidadePorProduto.toFixed(3);
+    tdCustoPorProduto.textContent = formatar(custoPorProduto);
     //criando linha da tabela
     var tabelaLinha = document.createElement('tr');
     tabelaLinha.classList.add('tabela__linha');
     //append td(s)
     tabelaLinha.appendChild(tdNome);
-    tabelaLinha.appendChild(tdQtdUsada);
     tabelaLinha.appendChild(tdPrecoUnitario);
     tabelaLinha.appendChild(tdQtdPorProduto);
     tabelaLinha.appendChild(tdCustoPorProduto);
 
     var tabela;
+    console.log('O tipo de despesa: ' + formularioTipoDespesa.value);
     if(tipoDespesa == 'ingrediente') {
         tabela = document.querySelector('.tabela__ingredientes');
     }
-    else {
+    else if(tipoDespesa == 'embalagem') {
         tabela = document.querySelector('.tabela__embalagens');
     }
 
