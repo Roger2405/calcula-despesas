@@ -1,0 +1,41 @@
+.formulario {
+    box-sizing: border-box;
+    display: none;
+    flex-direction: column;
+    margin: 1rem 15%;
+}
+
+.formulario-ativo {
+    display: flex;
+}
+.formulario__campo {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 0;
+    width: 100%;
+}
+
+.formulario__campo input{
+    width: 50%;
+}
+.formulario__campo div {
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width:758px) {
+    .formulario {
+        margin: 1rem 0;
+    }
+}

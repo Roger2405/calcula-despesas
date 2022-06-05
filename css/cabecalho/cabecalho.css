@@ -1,0 +1,20 @@
+.cabecalho {
+    /*border-bottom: .125rem solid black;*/
+    background-color: rgb(94, 173, 184);
+    text-align: center;
+    padding-bottom: .5rem;
+    height: 6rem;
+}
+.cabecalho__titulo {
+    color: white;
+    font-weight: 300;
+    font-size: 2.5rem;
+    /*max-width: 300px;*/
+    margin: 0 auto;
+    text-transform: uppercase;
+}
+
+@media screen and (max-width:768px){
+    .cabecalho__titulo {
+    }
+}

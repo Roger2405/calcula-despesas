@@ -1,0 +1,14 @@
+.tabela__titulo {
+    color: rgb(0, 174, 255);
+    margin-right: auto;
+    text-transform: uppercase;
+    
+}
+.tabela {
+    text-align: center;
+    width: 100%;
+    text-transform: uppercase;
+}
+.tabela__cabecalho {
+    background-color: gray;
+}

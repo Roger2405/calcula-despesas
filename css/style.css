@@ -1,0 +1,47 @@
+body {
+    background-color: aliceblue;
+    height: 100vh;
+    padding: 0 10rem;
+    
+}
+body * {
+    font-family: 'Quicksand', sans-serif;
+    
+}
+main {
+    background-color: white;
+    min-height: 100vh;
+}
+
+button {
+    background-color: grey;
+    border: none;
+    border-radius: 1rem;
+    color: aliceblue;
+    padding: .5rem;
+    align-self: flex-end;
+    text-transform: uppercase;
+    width: 10rem;
+}
+button:active {
+    background-color: rgb(180, 2, 2);
+}
+input {
+    padding: .5rem;
+}
+
+
+.container {
+    align-items: center;
+    display: flex;
+    padding: 1rem;
+    flex-direction: column;
+}
+
+
+
+@media  screen and (max-width:768px) {
+    body {
+        padding: 0;
+    }
+}
