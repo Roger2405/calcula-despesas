@@ -12,3 +12,6 @@
 .tabela__cabecalho {
     background-color: gray;
 }
+.tabela__cabecalho--nome {
+    width: 50%;
+}

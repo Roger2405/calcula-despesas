@@ -7,12 +7,11 @@
     <title>Calcular Despesas</title>
 
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;700&display=swap" rel="stylesheet">
-
+    
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/cabecalho/cabecalho.css">
     <link rel="stylesheet" href="./css/formulario/formulario.css">
-    <link rel="stylesheet" href="./css/formulario/dadosProduto.css">
     <link rel="stylesheet" href="./css/tabela.css">
 </head>
 <body>
@@ -21,63 +20,72 @@
     </header>
     <main class="principal">
         <div class="container">
-            <div class="dadosProduto">
-                <div class="formulario__campo">
-                    <label for="nome-produto">Nome do produto</label>
-                    <input type="text" id="nome-produto">
-                </div>
-                <div class="formulario__campo">
-                    <label for="quantidade-produtos">Total de produtos feitos com esses ingredientes:</label>
-                    <input type="number" id="quantidade-produtos">
-                </div>
+            <div class="formulario__campo">
+                <label for="quantidade-produtos">Total de produtos feitos com esses ingredientes:</label>
+                <input type="number" id="quantidade-produtos">
             </div>
-            <form class="formulario formulario-ativo">
+            
+            <form class="formulario">
                 <div class="formulario__campo">
-                    <label for="nome">Nome do ingrediente</label>
+                    <label for="nome">Nome da despesa</label>
                     <input type="text" id="nome" placeholder="Nome">
                 </div>
                 <div class="formulario__campo">
-                    <label for="quantidade">Quantidade utilizada</label>
-                    <input type="number" id="quantidade" placeholder="Quantidade utilizada">
-                    
+                    <label for="tipo">Tipo da despesa</label>
+                    <select name="tipo" id="tipo">
+                        <option value=""></option>
+                        <option value="ingrediente">Ingrediente</option>
+                        <option value="embalagem">Embalagem</option>
+                    </select>
                 </div>
-                <div class="formulario__campo">
-                    <label for="preco">Preço/Qtd</label>
-                    <div>
-                        <input type="text" id="preco" placeholder="Preço">
-                        <input type="number" id="quantidade-preco" placeholder="Qtd.">
+                <div class="formulario-ingrediente formulario-inativo">
+                    <div class="formulario__campo">
+                        <label for="quantidade">Quantidade utilizada</label>
+                        <input type="number" id="quantidade" placeholder="Quantidade utilizada">
+                        
+                    </div>
+                    <div class="formulario__campo">
+                        <label for="preco">Preço/Qtd</label>
+                        <div>
+                            <input type="text" id="preco-ingrediente" class="inputPreco" placeholder="Preço">
+                            <input type="number" id="quantidade-preco" placeholder="Qtd.">
+                        </div>
                     </div>
                 </div>
-                <button>+</button>
+                <div class="formulario-embalagem formulario-inativo">
+                    <div class="formulario__campo">
+                        <label for="valor-embalagem">Valor unitário</label>
+                        <input type="text" id="valor-embalagem" class="inputPreco" placeholder="Valor unitário">
+                    </div>
+                </div>
+                <button class="formulario__botao">+</button>
             </form>
+            <!--TABELAS-->
             <table class="tabela tabela__ingredientes">
                 <h3 class="tabela__titulo">Ingredientes</h3>
                 <tr class="tabela__cabecalho">
-                    <th>Nome</th>
+                    <th class="tabela__cabecalho--nome">Nome</th>
                     <th>Quantidade</th>
                     <th>Preço / Qtd</th>
-                    <th>Preço / Produto</th>
+                    <th>Custo / Produto</th>
                 </tr>
                 <tr class="tabela__linha">
                     <td>Açúcar</td>
                     <td>2.2 Kg</td>
                     <td>R$ 3,40</td>
-                    <td>R$ </td>
+                    <td>R$ 0,50</td>
                 </tr>
                 <tr class="tabela__linha">
                     <td>Morango</td>
                     <td>4.4 Kg</td>
                     <td>R$ 10,00</td>
-                    <td>R$ </td>
+                    <td>R$ 2,95</td>
                 </tr>
-            </table>
-            
-            
-
+            </table>    
             <table class="tabela tabela__embalagens">
                 <h3 class="tabela__titulo">Embalagens</h3>
                 <tr class="tabela__cabecalho">
-                    <th>Nome</th>
+                    <th class="tabela__cabecalho--nome">Nome</th>
                     <th>Quantidade</th>
                     <th>Preço</th>
                 </tr>
@@ -92,12 +100,17 @@
                     <td>R$ 0,50</td>
                 </tr>
             </table>
+                <div class="formulario__campo">
+                    <label for="nome-produto">Nome do produto</label>
+                    <input type="text" id="nome-produto">
+                </div>
         </div>
-        
     </main>
     <footer>
         
     </footer>
+    <script src="./js/form.js"></script>
     
+    <script src="https://github.com/codermarcos/simple-mask-money/releases/download/v3.0.0/simple-mask-money.js"></script>
 </body>
 </html>
