@@ -3,9 +3,19 @@
     display: flex;
     flex-direction: column;
     width: 300px;
+    opacity: 1;
+    transition: .5s;
+}
+.formulario__tipo {
+    height: fit-content;
+    transition: .5s;
+}
+.formulario__tipo > div {
+    position: relative;
 }
 .formulario-inativo {
     display: none;
+    transition: .5s;
 }
 .container > .formulario__campo {
     text-transform: uppercase;
