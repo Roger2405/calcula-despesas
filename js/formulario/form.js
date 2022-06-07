@@ -38,7 +38,17 @@ const inputs = document.querySelectorAll('input');
 inputs.forEach(input => {
     if(input.dataset.tipo != 'quantidade-usada' && input.dataset.tipo != 'quantidade-preco'){
         input.addEventListener('blur', (evento) => {
-            
+            var elemento = input.parentElement.querySelector('label');
+            /*var elementoMensagemErro = input.parentElement.querySelector('.mensagem-erro');*/
+            if(input.validity.valueMissing){
+                /*elementoMensagemErro.innerHTML = 'Você deve preencher este campo';*/
+                elemento.classList.add('formulario-destaque-erro');
+                /*elementoMensagemErro.classList.remove('mensagem-erro-oculta');*/
+            }
+            else {
+                elemento.classList.remove('formulario-destaque-erro');
+                /*elementoMensagemErro.classList.add('mensagem-erro-oculta');*/
+            }
                 
             
         })
@@ -92,7 +102,7 @@ function extrairDadosDosInputs() {
     if(quantidade == '') {
         quantidade = 1;
     }
-    var valores = [nomeDespesa, quantidade, quantidadeUtilizada, preco];
+    var valores = [nomeDespesa, quantidade, quantidadeUtilizada, preco, quantidadeDeProdutos];
 
     if(inputsValidos(valores)){
         processarDados(nomeDespesa, tipoDespesa, quantidadeUtilizada, quantidade, preco);
@@ -108,7 +118,6 @@ function inputsValidos(valores) {
     verificaMensagemDeErro(valoresInvalidos);
     if(valoresInvalidos.length != 0) {
         return false;
-
     }
     else {
         return true;
@@ -122,8 +131,10 @@ function verificaMensagemDeErro(valoresInvalidos) {
         elementoMensagemErro.classList.add('mensagem-erro-oculta');
     }
     else {
+        console.log('Há campos vazios!');
         if(valoresInvalidos.length == 1){
             mensagem = 'Há um campo obrigatório vazio';
+            elementoMensagemErro.classList.remove('mensagem-erro-oculta');
         }
         else if(valoresInvalidos.length > 1) {
             mensagem = 'Há campos obrigatórios vazios';

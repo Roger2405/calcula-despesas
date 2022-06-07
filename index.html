@@ -20,8 +20,8 @@
     </header>
     <main class="principal">
         <div class="container">
-            <span class="mensagem-erro mensagem-erro-oculta"></span>
             <div class="formulario__campo">
+                <span class="mensagem-erro mensagem-erro-oculta"></span>
                 <label for="quantidade-produtos">Total de produtos feitos com esses ingredientes:</label>
                 <input type="number" id="quantidade-produtos" required autofocus>
             </div>
@@ -30,6 +30,7 @@
                 <div class="formulario__campo">
                     <label for="nome-despesa">Nome da despesa <sup>*</sup></label>
                     <input type="text" id="nome-despesa" placeholder="Nome" required>
+                    <span class="mensagem-erro mensagem-erro-oculta"></span>
                 </div>
                 <div class="formulario__campo">
                     <label for="tipo-despesa">Tipo da despesa <sup>*</sup></label>
@@ -37,6 +38,7 @@
                         <option>Selecione...</option>
                         <option value="ingrediente">Ingrediente</option>
                         <option value="embalagem">Embalagem</option>
+                        <span class="mensagem-erro mensagem-erro-oculta"></span>
                     </select>
                 </div>
                 <!--FORMULÁRIO TIPO-->
@@ -45,12 +47,16 @@
                         <label for="quantidade">Quantidade utilizada <sub>(opcional)</sub></label>
                         <input type="text" pattern="[\d]+" id="quantidade-usada" data-tipo="quantidade-usada" placeholder="Quantidade utilizada">
                     </div>
-                    <div class="formulario__campo">
-                        <label for="preco">Preço/Quantidade</label>
+                    <div class="formulario__campo" id="preco-quantidade">
+                        <!--<label for="preco">Preço/Quantidade</label>
                         <div>
                             <input type="text" id="preco" data-tipo="preco" placeholder="Preço" required>
                             <input type="number" id="quantidade-preco" data-tipo="quantidade-preco" placeholder="1">
-                        </div>
+                        </div>-->
+                        <label for="preco" id="">Preço/Quantidade</label>
+                        <input type="text" id="preco" data-tipo="preco" placeholder="Preço" required>
+                        <input type="number" id="quantidade-preco" data-tipo="quantidade-preco" placeholder="1">
+                        
                     </div>
                     <button class="formulario__botao">Adicionar</button>
                 </div>
