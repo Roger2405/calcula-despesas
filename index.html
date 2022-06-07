@@ -20,56 +20,36 @@
     </header>
     <main class="principal">
         <div class="container">
+            <span class="mensagem-erro mensagem-erro-oculta"></span>
             <div class="formulario__campo">
                 <label for="quantidade-produtos">Total de produtos feitos com esses ingredientes:</label>
-                <input type="number" id="quantidade-produtos">
+                <input type="number" id="quantidade-produtos" required autofocus>
             </div>
             <!--**************FORMULÁRIO**************-->
             <form class="formulario">
                 <div class="formulario__campo">
-                    <label for="nome-despesa">Nome da despesa</label>
-                    <input type="text" id="nome-despesa" placeholder="Nome">
+                    <label for="nome-despesa">Nome da despesa <sup>*</sup></label>
+                    <input type="text" id="nome-despesa" placeholder="Nome" required>
                 </div>
                 <div class="formulario__campo">
-                    <label for="tipo-despesa">Tipo da despesa</label>
+                    <label for="tipo-despesa">Tipo da despesa <sup>*</sup></label>
                     <select name="tipo" id="tipo-despesa">
-                        <option value="" select></option>
+                        <option>Selecione...</option>
                         <option value="ingrediente">Ingrediente</option>
                         <option value="embalagem">Embalagem</option>
                     </select>
                 </div>
-                <!--
-                <div class="formulario__tipo formulario-inativo">
-                    <div class="formulario__tipo--ingrediente formulario-inativo">
-                        <div class="formulario__campo">
-                            <label for="quantidade">Quantidade utilizada</label>
-                            <input type="number" id="quantidade" placeholder="Quantidade utilizada">
-                        </div>
-                        <div class="formulario__campo">
-                            <label for="preco">Preço/Qtd</label>
-                            <div>
-                                <input type="text" id="preco-ingrediente" data-tipo="preco" placeholder="Preço">
-                                <input type="number" id="quantidade-preco" placeholder="Qtd.">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="formulario__tipo--embalagem formulario-inativo">
-                        <div class="formulario__campo">
-                            <label for="valor-embalagem">Valor unitário</label>
-                            <input type="text" id="preco-embalagem" data-tipo="preco" placeholder="Valor unitário">
-                        </div>
-                    </div>
-                </div>-->
+                <!--FORMULÁRIO TIPO-->
                 <div class="formulario__tipo formulario-inativo">          
                     <div class="formulario__campo">
-                        <label for="quantidade">Quantidade utilizada</label>
-                        <input type="number" id="quantidade-usada" data-tipo="quantidade-usada" placeholder="Quantidade utilizada">
+                        <label for="quantidade">Quantidade utilizada <sub>(opcional)</sub></label>
+                        <input type="text" pattern="[\d]+" id="quantidade-usada" data-tipo="quantidade-usada" placeholder="Quantidade utilizada">
                     </div>
                     <div class="formulario__campo">
                         <label for="preco">Preço/Quantidade</label>
                         <div>
                             <input type="text" id="preco" data-tipo="preco" placeholder="Preço" required>
-                            <input type="number" id="quantidade-preco" placeholder="1 (padrão)">
+                            <input type="number" id="quantidade-preco" data-tipo="quantidade-preco" placeholder="1">
                         </div>
                     </div>
                     <button class="formulario__botao">Adicionar</button>
@@ -78,7 +58,7 @@
             <!--***************TABELAS**************-->
             <!--nome, quantidadeUtilizada, precoUnitario, quantidadePorProduto, custoPorProduto-->
             
-
+            
             
             <table class="tabela tabela__ingredientes">
                 <h3 class="tabela__titulo">Ingredientes</h3>
@@ -117,6 +97,6 @@
     <footer>
         
     </footer>
-    <script src="./js/formulario/form.js" type="module"></script>
+    <script src="./js/formulario/form.js"></script>
 </body>
 </html>

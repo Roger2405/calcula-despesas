@@ -30,7 +30,7 @@ button {
 button:active {
     background-color: rgb(180, 2, 2);
 }
-input {
+input,select {
     padding: .5rem;
 }
 
@@ -49,6 +49,19 @@ input {
     margin-right: 3rem;
     display: flex;
     justify-content: space-around;
+}
+
+.mensagem-erro {
+    background-color: rgba(255, 0, 0, 0.25);
+    border-radius: 5px;
+    color: red;
+    display: inline-block;
+    padding: .26rem;
+    
+    text-align: center;
+}
+.mensagem-erro-oculta {
+    display: none;
 }
 
 @media  screen and (max-width:768px) {

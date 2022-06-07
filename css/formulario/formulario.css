@@ -7,15 +7,15 @@
     transition: .5s;
 }
 .formulario__tipo {
-    height: fit-content;
-    transition: .5s;
-}
-.formulario__tipo > div {
-    position: relative;
+    height: 150px;
+    transition: .25s;
+    transform: scaleY(1);
 }
 .formulario-inativo {
-    display: none;
-    transition: .5s;
+    transition: .25s;
+    transform: scaleY(0);
+    height: 0;
+    opacity: 0;
 }
 .container > .formulario__campo {
     text-transform: uppercase;
