@@ -1,0 +1,94 @@
+[
+    {
+        "nome": "Geleia de Morango",
+        "despesas": [
+            {
+                "nomeDespesa": "Açúcar",
+                "tipoDespesa": "ingrediente",
+                "precoUnitario": 3.40,
+		        "quantidadePorProduto": 0.147,
+		        "custoPorProduto": 0.50
+            },
+            {
+                "nomeDespesa": "Morango",
+                "tipoDespesa": "ingrediente",
+                "precoUnitario": 10.00,
+		        "quantidadePorProduto": 0.293,
+		        "custoPorProduto": 2.93
+            },
+            {
+                "nomeDespesa": "Vidro",
+                "tipoDespesa": "embalagem",
+                "precoUnitario": 1.54,
+		        "quantidadePorProduto": 1,
+		        "custoPorProduto": 1.54
+            },
+            {
+                "nomeDespesa": "Tampa",
+                "tipoDespesa": "embalagem",
+                "precoUnitario": 0.58,
+		        "quantidadePorProduto": 1,
+		        "custoPorProduto": 0.58
+            }
+        ]
+    },
+    {
+        "nome": "Geleia de Uva",
+        "despesas": [
+            {
+                "nomeDespesa": "Açúcar",
+                "tipoDespesa": "ingrediente",
+                "precoUnitario": 3.40,
+		        "quantidadePorProduto": 0.147,
+		        "custoPorProduto": 0.50
+            },
+            {
+                "nomeDespesa": "Uva",
+                "tipoDespesa": "ingrediente",
+                "precoUnitario": 3.00,
+		        "quantidadePorProduto": 0.254,
+		        "custoPorProduto": 0.63
+            },
+            {
+                "nomeDespesa": "Vidro",
+                "tipoDespesa": "embalagem",
+                "precoUnitario": 1.54,
+		        "quantidadePorProduto": 1,
+		        "custoPorProduto": 1.54
+            },
+            {
+                "nomeDespesa": "Tampa",
+                "tipoDespesa": "embalagem",
+                "precoUnitario": 0.58,
+		        "quantidadePorProduto": 1,
+		        "custoPorProduto": 0.58
+            }
+        ]
+    },
+    {
+        "nome": "Casquinha de Laranja",
+        "despesas": [
+            {
+                "nomeDespesa": "Açúcar",
+                "tipoDespesa": "ingrediente",
+                "precoUnitario": 3.40,
+		        "quantidadePorProduto": 0.050,
+		        "custoPorProduto": 0.50
+            },
+            {
+                "nomeDespesa": "Laranja",
+                "tipoDespesa": "ingrediente",
+                "precoUnitario": 3.00,
+		        "quantidadePorProduto": 0.254,
+		        "custoPorProduto": 0.63
+            },
+            {
+                "nomeDespesa": "Pacote",
+                "tipoDespesa": "embalagem",
+                "precoUnitario": 0.0023,
+		        "quantidadePorProduto": 1,
+		        "custoPorProduto": 0.0023
+            }
+        ]
+    }
+]

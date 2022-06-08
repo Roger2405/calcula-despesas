@@ -1,108 +1,43 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calcular Despesas</title>
-
-    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;700&display=swap" rel="stylesheet">
+    <title>Produtos</title>
     
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="./css/cabecalho/cabecalho.css">
-    <link rel="stylesheet" href="./css/formulario/formulario.css">
     <link rel="stylesheet" href="./css/tabela.css">
+    <link rel="stylesheet" href="./css/cabecalho/cabecalho.css">
+    <link rel="stylesheet" href="./css/tabela/tabelaProdutos.css">
 </head>
 <body>
+    
     <header class="cabecalho">
-        <h1 class="cabecalho__titulo">Calcular Despesas</h1>
+        <h1 class="cabecalho__titulo">Produtos</h1>
     </header>
-    <main class="principal">
-        <div class="container">
-            <div class="formulario__campo">
-                <span class="mensagem-erro mensagem-erro-oculta"></span>
-                <label for="quantidade-produtos">Total de produtos feitos com esses ingredientes:</label>
-                <input type="number" id="quantidade-produtos" required autofocus>
-            </div>
-            <!--**************FORMULÁRIO**************-->
-            <form class="formulario">
-                <div class="formulario__campo">
-                    <label for="nome-despesa">Nome da despesa <sup>*</sup></label>
-                    <input type="text" id="nome-despesa" placeholder="Nome" required>
-                    <span class="mensagem-erro mensagem-erro-oculta"></span>
-                </div>
-                <div class="formulario__campo">
-                    <label for="tipo-despesa">Tipo da despesa <sup>*</sup></label>
-                    <select name="tipo" id="tipo-despesa">
-                        <option>Selecione...</option>
-                        <option value="ingrediente">Ingrediente</option>
-                        <option value="embalagem">Embalagem</option>
-                        <span class="mensagem-erro mensagem-erro-oculta"></span>
-                    </select>
-                </div>
-                <!--FORMULÁRIO TIPO-->
-                <div class="formulario__tipo formulario-inativo">          
-                    <div class="formulario__campo">
-                        <label for="quantidade">Quantidade utilizada <sub>(opcional)</sub></label>
-                        <input type="text" pattern="[\d]+" id="quantidade-usada" data-tipo="quantidade-usada" placeholder="Quantidade utilizada">
-                    </div>
-                    <div class="formulario__campo" id="preco-quantidade">
-                        <!--<label for="preco">Preço/Quantidade</label>
-                        <div>
-                            <input type="text" id="preco" data-tipo="preco" placeholder="Preço" required>
-                            <input type="number" id="quantidade-preco" data-tipo="quantidade-preco" placeholder="1">
-                        </div>-->
-                        <label for="preco" id="">Preço/Quantidade</label>
-                        <input type="text" id="preco" data-tipo="preco" placeholder="Preço" required>
-                        <input type="number" id="quantidade-preco" data-tipo="quantidade-preco" placeholder="1">
-                        
-                    </div>
-                    <button class="formulario__botao">Adicionar</button>
-                </div>
-            </form>
-            <!--***************TABELAS**************-->
-            <!--nome, quantidadeUtilizada, precoUnitario, quantidadePorProduto, custoPorProduto-->
-            
-            
-            
-            <table class="tabela tabela__ingredientes">
-                <h3 class="tabela__titulo">Ingredientes</h3>
-                <tr class="tabela__cabecalho">
-                    <th class="tabela__cabecalho--nome">Nome</th>
-                    <th class="tabela__cabecalho--precoUnitario">Preço unitário</th>
-                    <th class="tabela__cabecalho--quantidadePorProduto">Quantidade por Produto</th>
-                    <th class="tabela__cabecalho--custoPorProduto">Custo por Produto</th>
-                </tr>
-            </table>    
-            <div class="custo-total">
-                <p>Custo total de ingredientes: </p>
-                <b class="custo-total--valor custo-ingredientes">00,00</b>
-            </div>
-            <table class="tabela tabela__embalagens">
-                <h3 class="tabela__titulo">Embalagens</h3>
-                <tr class="tabela__cabecalho">
-                    <th class="tabela__cabecalho--nome">Nome</th>
-                    <th class="tabela__cabecalho--precoUnitario">Preço unitário</th>
-                    <th class="tabela__cabecalho--quantidadePorProduto">Quantidade por Produto</th>
-                    <th class="tabela__cabecalho--custoPorProduto">Custo por Produto</th>
-                </tr>
+    <main>
+        <div class="conteudo__principal">
+            <table class="tabela">
+                <thead>
+                    <tr class="tabela__cabecalho">
+                        <th class="tabela__cabecalho--nome">Nome do Produto</th>
+                        <th>Quantidade de Despesas</th>
+                        <th>Custo do Produto</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                </tbody>
+                <tfoot>
+                    
+                </tfoot>
             </table>
-            <div class="custo-total">
-                <p>Custo total de embalagens: </p>
-                <b class="custo-total--valor custo-embalagens">0000</b>
-            </div>
             
-
-                <div class="formulario__campo">
-                    <label for="nome-produto">Nome do produto</label>
-                    <input type="text" id="nome-produto">
-                </div>
         </div>
-    </main>
-    <footer>
         
-    </footer>
-    <script src="./js/formulario/form.js"></script>
+    </main>
+    <script src="./js/produtos.js" type="module"></script>
 </body>
 </html>

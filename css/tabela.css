@@ -10,11 +10,25 @@
     text-transform: uppercase;
 }
 .tabela__cabecalho {
-    background-color: var(--azul-principal);
+    background-color: var(--azul-escuro);
     color: white;
 }
 .tabela__cabecalho--nome {
+}
+
+td:first-child {
     width: 50%;
+}
+
+tr:nth-child(2n) {
+    background-color: rgb(223, 223, 223);
+}
+th {
+    padding: 0 .5rem;
+
+}
+tbody tr {
+    height: 3rem;
 }
 
 @media screen and (max-width) {

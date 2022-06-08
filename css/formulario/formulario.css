@@ -11,7 +11,7 @@
     border-radius: 5px;
 }
 .formulario__tipo {
-    height: 150px;
+    height: 180px;
     transition: .25s;
     transform: scaleY(1);
 }
@@ -31,30 +31,22 @@
     justify-content: space-between;
     max-width: 600px;
     width: 100%;
-    padding: 1rem 0;
+    margin: .75rem 0;
 }
 
 .formulario__campo input{
     width: 50%;
 }
-/*
-.formulario__campo div {
-    width: 50%;
-    display: flex;
-    justify-content: space-between;
-}
-*/
 
-#preco-quantidade {
+.formulario__campo:last-child {
     align-items: center;
     width: 100%;
     display: flex;
     justify-content: space-between;
 }
-#preco-quantidade label{
-    flex-basis: 50%;
+#label-preco {
+    margin-right: .5rem;
 }
-
 #quantidade-produtos {
     width: 20%;
     min-width: 5rem;
@@ -62,10 +54,17 @@
 }
 
 
-.formulario__botao {
-    width: 100%;
+.mensagem-erro {
+    background-color: rgba(255, 0, 0, 0.25);
+    color: red;
+    display: inline-block;
+    padding: .1rem;
+    position: absolute;
+    transform: translateY(-150%);
 }
-
+.mensagem-erro-oculta {
+    display: none;
+}
 
 
 

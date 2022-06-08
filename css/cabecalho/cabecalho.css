@@ -3,12 +3,12 @@
     background-color: var(--azul-principal);
     text-align: center;
     padding: 1rem;
-
+    
 }
 .cabecalho__titulo {
     color: white;
-    font-weight: 300;
-    font-size: 2.5rem;
+    font-weight: 700;
+    font-size: 1.5rem;
     /*max-width: 300px;*/
     text-transform: uppercase;
 }

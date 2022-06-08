@@ -1,5 +1,7 @@
 :root {
-    --azul-principal: rgb(94, 173, 184);
+    --azul-escuro: rgb(94, 173, 184);
+    --azul-principal: rgb(0, 174, 255);
+    --vermelho-escuro: rgb(184, 94, 94);
 }
 
 
@@ -18,17 +20,26 @@ main {
 }
 
 button {
-    background-color: grey;
     border: none;
-    border-radius: 1rem;
+    border-radius: 2rem;
     color: aliceblue;
     padding: .5rem;
-    align-self: flex-end;
+    margin: 1rem;
     text-transform: uppercase;
-    width: 10rem;
+}
+.botao__despesa {
+    background-color: grey;
+    width: calc(100% - 2rem);
+}
+.botao__produto {
+    background-color: rgb(40, 155, 40);
+    margin: 0;
+    margin-left: 50%;
+    width: 50%;
+    height: 3rem;
 }
 button:active {
-    background-color: rgb(180, 2, 2);
+    background-color: var(--vermelho-escuro);
 }
 input,select {
     padding: .5rem;
@@ -42,29 +53,6 @@ input,select {
     flex-direction: column;
 }
 
-.custo-total {
-    width: 100%;
-    max-width: 400px;
-    margin-left: auto;
-    margin-right: 3rem;
-    display: flex;
-    justify-content: space-around;
-}
-
-.mensagem-erro {
-    background-color: rgba(255, 0, 0, 0.25);
-    border-radius: 5px;
-    color: red;
-    display: inline-block;
-    padding: .26rem;
-    position: absolute;
-    transform: translateY(-100%);
-    
-    text-align: center;
-}
-.mensagem-erro-oculta {
-    display: none;
-}
 
 @media  screen and (max-width:768px) {
     body {
