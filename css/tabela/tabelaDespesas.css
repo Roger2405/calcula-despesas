@@ -1,0 +1,26 @@
+
+.tabela__cabecalho--nome {
+    width: auto;
+    height: auto;
+}
+.tabela__cabecalho--precoUnitario {
+    width: calc(50% / 3);
+    height: auto;
+}
+.tabela__cabecalho--quantidadePorProduto {
+    width: calc(50% / 3);
+    height: auto;
+}
+.tabela__cabecalho--custoPorProduto {
+    width: calc(50% / 3);
+    height: auto;
+}
+
+@media screen and (max-width: 480px) {
+    .tabela__cabecalho--precoUnitario, td:nth-child(2) {
+        display: none;
+    }
+    .tabela__cabecalho--nome {
+        width: calc(100% - 50%/1.5);
+    }
+}

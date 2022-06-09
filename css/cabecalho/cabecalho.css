@@ -1,9 +1,9 @@
 .cabecalho {
     /*border-bottom: .125rem solid black;*/
-    background-color: var(--azul-principal);
     text-align: center;
     padding: 1rem;
-    
+    box-shadow: 0 1rem .5rem rgba(0, 0, 0, 0.5);
+    background-image: linear-gradient(var(--azul-principal), rgba(0, 0, 255, 0));
 }
 .cabecalho__titulo {
     color: white;

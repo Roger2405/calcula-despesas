@@ -1,13 +1,13 @@
 :root {
     --azul-escuro: rgb(94, 173, 184);
+    --fundo-body: rgb(0, 47, 61);
     --azul-principal: rgb(0, 174, 255);
     --vermelho-escuro: rgb(184, 94, 94);
 }
 
 
 body {
-    background-color: aliceblue;
-    padding: 0 10rem;
+    background-color: var(--fundo-body);
     
 }
 body * {
@@ -15,47 +15,47 @@ body * {
     
 }
 main {
-    background-color: white;
+    background-color: var(--azul-principal);
     min-height: 100vh;
+    padding: 3rem 1rem;
+    margin: 0 5rem;
 }
 
-button {
-    border: none;
-    border-radius: 2rem;
-    color: aliceblue;
-    padding: .5rem;
-    margin: 1rem;
-    text-transform: uppercase;
-}
-.botao__despesa {
-    background-color: grey;
-    width: calc(100% - 2rem);
-}
-.botao__produto {
-    background-color: rgb(40, 155, 40);
-    margin: 0;
-    margin-left: 50%;
-    width: 50%;
-    height: 3rem;
-}
-button:active {
-    background-color: var(--vermelho-escuro);
-}
+
 input,select {
     padding: .5rem;
 }
 
-
+/*
 .container {
     align-items: center;
     display: flex;
     padding: 1rem;
     flex-direction: column;
 }
+*/
 
 
-@media  screen and (max-width:768px) {
+@media  screen and (max-width:1024px) {
     body {
-        padding: 0;
+        padding: .5rem;
+    }
+    
+}
+@media  screen and (min-width:1400px) {
+    .container-principal {
+        display: flex;
+        flex-direction: row-reverse;
+    }
+    .formularios {
+        background-color: rgba(145, 202, 209, 0.548);
+        background-image: linear-gradient(45deg,rgb(93, 157, 216), rgb(147, 248, 255));
+        border-radius: 1rem;
+        box-shadow: 0 0 .5rem rgba(0, 0, 0, 0.5);
+        flex-basis: 300px;
+        margin: 0 1rem;
+    }
+    .tabelas {
+        flex-grow: 1;
     }
 }

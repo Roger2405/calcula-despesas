@@ -8,29 +8,36 @@
     text-align: center;
     width: 100%;
     text-transform: uppercase;
+    border-spacing: 0;
 }
 .tabela__cabecalho {
+    width: 100%;
     background-color: var(--azul-escuro);
     color: white;
 }
-.tabela__cabecalho--nome {
-}
 
-td:first-child {
-    width: 50%;
-}
 
 tr:nth-child(2n) {
     background-color: rgb(223, 223, 223);
 }
 th {
     padding: 0 .5rem;
-
 }
 tbody tr {
     height: 3rem;
 }
 
-@media screen and (max-width) {
-    
+@media screen and (max-width: 480px) {
+    .tabela__cabecalho {
+        font-size: .5rem;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .tabela__cabecalho {
+        font-size: .75rem;
+    }
+    .tabela__cabecalho--nome {
+        font-size: 1rem;
+    }
 }

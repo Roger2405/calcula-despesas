@@ -1,0 +1,65 @@
+.botao {
+    border: none;
+    color: aliceblue;
+    padding: .5rem;
+    margin: 1rem;
+    text-transform: uppercase;
+}
+.botao__despesa {
+    background-color: var(--azul-principal);
+    width: calc(100% - 2rem);
+}
+
+
+.botao__produto {
+    background-color: rgb(40, 155, 40);
+    margin: 0;
+    margin-left: 50%;
+    margin-right: 2rem;
+    width: calc(50% - 2rem);
+    height: 3rem;
+}
+.botao:active {
+    background-color: var(--vermelho-escuro);
+}
+.botao:hover {
+    box-shadow: 0 .2rem .2rem rgba(0, 0, 0, 0.5) ;
+    transition: .5s;
+}
+.botao__despesa:hover {
+    animation-name: animaBotao;
+    animation-duration: 1s;
+}
+.botao__produto:hover {
+    animation-name: animaBotao;
+    animation-duration: 1s;
+}
+
+@keyframes animaBotao{
+    0% {
+        transform: scaleY(1);
+    }
+    60% {
+        transform: scaleY(0.95) scaleX(1.1);
+        
+    }
+    100% {
+        transform: scale(1);
+
+    }
+}
+
+
+@media screen and (min-width: 1024px) {
+    
+    .botao {
+        margin: 0;
+        margin-top: 1rem;
+    }
+    .botao__despesa {
+        border-radius: 0 0 1rem 1rem;
+        bottom: 0;
+        position: absolute;
+        width: 100%;
+    }
+}
