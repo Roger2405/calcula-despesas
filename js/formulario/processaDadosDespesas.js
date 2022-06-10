@@ -3,6 +3,9 @@ var listaDeDespesas = [];
 var precoUnitario;
 var quantidadePorProduto;
 var custoPorProduto;
+
+const tabelas = document.querySelectorAll('tbody');
+
 export function processarDados(nomeDespesa, tipoDespesa, quantidadeUtilizada, quantidade, preco, quantidadeDeProdutos) {
     precoUnitario = preco/quantidade;
     custoPorProduto = ((precoUnitario) * quantidadeUtilizada) / quantidadeDeProdutos;
@@ -25,7 +28,6 @@ function criaObjetoDespesa(nomeDespesa, tipoDespesa, precoUnitario, quantidadePo
 }
 
 function atualizaTabela(listaDeDespesas) {
-    const tabelas = document.querySelectorAll('tbody');
     var linhasTabela = document.querySelectorAll('.tabela__linha');
     linhasTabela.forEach(linha => {
         linha.remove();

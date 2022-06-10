@@ -1,0 +1,3 @@
+--cor-principal: #00C2FF;
+--cor-secundaria: #CCCCCC;
+--cor-linha: #FBFBFB; 95%

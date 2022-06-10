@@ -1,29 +1,22 @@
-:root {
-    --azul-escuro: rgb(94, 173, 184);
-    --fundo-body: rgb(0, 47, 61);
-    --azul-principal: rgb(0, 174, 255);
-    --vermelho-escuro: rgb(184, 94, 94);
-}
-
+@import url(./variaveis.css);
 
 body {
-    background-color: var(--fundo-body);
+    background-color: var(--cor-principal);
     
 }
 body * {
-    font-family: 'Quicksand', sans-serif;
-    
+    /*font-family: 'Quicksand', sans-serif;*/
+    font-family: 'Poppins', sans-serif;
 }
+
 main {
-    background-color: var(--azul-principal);
-    min-height: 100vh;
-    padding: 3rem 1rem;
-    margin: 0 5rem;
+    background-color: /*var(--azul-principal)*/ black;
+    padding-top: 4rem;
 }
 
 
-input,select {
-    padding: .5rem;
+.container {
+    background-color: var(--cor-principal);
 }
 
 /*
@@ -36,11 +29,8 @@ input,select {
 */
 
 
-@media  screen and (max-width:1024px) {
-    body {
-        padding: .5rem;
-    }
-    
+@media  screen and (max-width:768px) {
+
 }
 @media  screen and (min-width:1400px) {
     .container-principal {

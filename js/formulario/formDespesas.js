@@ -30,6 +30,8 @@ function resetarFormulario(){
     inputQuantidadeUtilizada.placeholder = `padrão: ${quantidadeDeProdutos}`;
 }
 
+
+
 inputQuantidadeDeProdutos.addEventListener('blur', evento => {
     var elementoErro = evento.target.parentElement.querySelector('.mensagem-erro');
     if(evento.target.validity.valueMissing | evento.target.value == 0){

@@ -1,41 +1,55 @@
+.tabelas {
+    background-color: var(--cor-principal);
+    padding: 0 .5rem;
+}
+
 .tabela__titulo {
-    color: rgb(0, 174, 255);
+    color: white;
     margin-right: auto;
     text-transform: uppercase;
     
 }
 .tabela {
-    text-align: center;
-    width: 100%;
-    text-transform: uppercase;
     border-spacing: 0;
+    text-align: center;
+    text-transform: uppercase;
+    width: 100%;
 }
 .tabela__cabecalho {
-    width: 100%;
-    background-color: var(--azul-escuro);
-    color: white;
+    background-color: var(--cor-secundaria);
 }
 
 
-tr:nth-child(2n) {
-    background-color: rgb(223, 223, 223);
-}
+
 th {
-    padding: 0 .5rem;
+    border: 1px solid rgb(255, 255, 255);
+    color: white;
+    font-size: 1rem;
+    padding: .5rem .5rem;
+    line-height: 1rem;
 }
 tbody tr {
-    height: 3rem;
+    background-color: rgba(255, 255, 255, 0.95);
+    height: 2rem;
+}
+tr:nth-child(2n) {
+    background-color: var(--cor-linha);
+}
+
+tfoot {
+    background-color: unset;
+}
+tfoot td:last-child{
+    background-color: var(--cor-secundaria);
 }
 
 @media screen and (max-width: 480px) {
     .tabela__cabecalho {
-        font-size: .5rem;
     }
 }
 
 @media screen and (max-width: 1024px) {
     .tabela__cabecalho {
-        font-size: .75rem;
     }
     .tabela__cabecalho--nome {
         font-size: 1rem;
