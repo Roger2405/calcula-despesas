@@ -92,22 +92,21 @@ select.formulario__campo--input {
     display: inline-block;
     padding: .1rem;
     position: absolute;
-    transform: translateY(-150%);
+    transform: translateY(-200%);
 }
 .mensagem-erro-oculta {
     display: none;
 }
-.container-principal ~ .formulario__campo {
+.formulario__nome-produto{
     margin-bottom: 5rem;
 }
 .container-principal ~ .formulario__campo label{
     font-size: 1.25rem;
 }
-@media screen and (max-width:758px) {
-}
+
 
 @media screen and (min-width: 1440px) {
     .formulario {
-        max-width: 300px;
+        padding: 0;
     }
 }

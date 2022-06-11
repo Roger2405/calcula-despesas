@@ -29,7 +29,7 @@
           <div>
             <div class="formulario__campo" id="formulario__quantidadeProdutos">
               <span class="mensagem-erro mensagem-erro-oculta">Este campo não pode ficar vazio</span>
-              <label for="quantidade-produtos">Total de produtos feitos com os ingredientes abaixo:</label>
+              <label for="quantidade-produtos">Total de produtos feitos com o elemento abaixo:</label>
               <input class="formulario__campo--input" type="number" id="quantidade-produtos" required autofocus>
             </div>
             <!--**************FORMULÁRIO**************-->
@@ -118,19 +118,21 @@
             </table>
             
           </div>
-          <div class="soma-custos">
-            <p>Custo total por produto: </p>
-            <p id="custo-total">R$ 0,00</p>
-          </div>
         </div>
       </div>
-      
-      <div class="formulario__campo">
-        <label for="nome-produto">Nome do produto</label>
-        <input class="formulario__campo--input" type="text" id="nome-produto">
+      <div class="soma-custos">
+        <p>Custo total do produto: </p>
+        <p id="custo-total">R$ 0,00</p>
       </div>
+      <form action="">
+        <div class="formulario__campo formulario__nome-produto">
+          <label for="nome-produto">Nome do produto</label>
+          <input class="formulario__campo--input" type="text" id="nome-produto" required>
+        </div>
+        
+        <button class="botao botao__produto">Adicionar produto</button>
+      </form>
     </div>
-    <button class="botao botao__produto">Adicionar produto</button>
   </main>
   <footer>
     

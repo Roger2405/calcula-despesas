@@ -1,5 +1,5 @@
 
-var listaDeDespesas = [];
+export var listaDeDespesas = [];
 var precoUnitario;
 var quantidadePorProduto;
 var custoPorProduto;

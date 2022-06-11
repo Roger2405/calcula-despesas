@@ -5,6 +5,7 @@
     position: fixed;
     text-align: center;
     width: 100vw;
+    z-index: 15;
 }
 .cabecalho__titulo {
     color: white;
@@ -12,9 +13,4 @@
     font-size: 1.5rem;
     /*max-width: 300px;*/
     text-transform: uppercase;
-}
-
-@media screen and (max-width:768px){
-    .cabecalho__titulo {
-    }
 }

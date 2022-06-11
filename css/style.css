@@ -11,12 +11,12 @@ body * {
 
 main {
     background-color: /*var(--azul-principal)*/ black;
-    padding-top: 4rem;
 }
 
 
 .container {
     background-color: var(--cor-principal);
+    padding-top: 4rem;
 }
 
 /*
@@ -29,23 +29,23 @@ main {
 */
 
 
-@media  screen and (max-width:768px) {
-
-}
 @media  screen and (min-width:1400px) {
+    
     .container-principal {
         display: flex;
-        flex-direction: row-reverse;
+        flex-direction: row;
+        margin: 0 10vw;
     }
     .formularios {
-        background-color: rgba(145, 202, 209, 0.548);
-        background-image: linear-gradient(45deg,rgb(93, 157, 216), rgb(147, 248, 255));
         border-radius: 1rem;
         box-shadow: 0 0 .5rem rgba(0, 0, 0, 0.5);
-        flex-basis: 300px;
+        flex: 25% 1 1;
         margin: 0 1rem;
+        margin-top: 1rem;
+        max-width: 500px;
+        height: min-content;
     }
     .tabelas {
-        flex-grow: 1;
+        flex: 75% 1 1;
     }
 }
