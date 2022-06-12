@@ -1,6 +1,6 @@
 .formularios {
     padding-top: 2rem;
-    background-color: var(--cor-principal);
+    background-color: var(--cor-principal); 
 }
 .formulario {
     box-sizing: border-box;

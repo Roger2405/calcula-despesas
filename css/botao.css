@@ -1,25 +1,51 @@
 .botao {
     border: none;
-    color: var(--cor-principal);
     text-transform: uppercase;
 }
 
-.botao__despesa {
+.botao-despesa {
     background-color: white;
     border-radius: 0 0 1rem 1rem;
-    font-size: 2rem;
+    color: var(--cor-principal);
+    font-size: auto;
     font-weight: 700;
     height: 3rem;
-    margin-top: 1.25rem;
+    margin-top: 0;
     width: 100%;
 }
-.div__botao-delete{ 
+.botao-span{
     position: relative;
+
 }
-.botao__delete {
-    position: absolute;
+.botao-delete {
+    background-color: rgb(255, 80, 80);
+    border: .3rem solid rgb(211, 118, 118);
+    color: white;
+    height: calc(100% - 4px);
+    left: 0;
+    margin: 2px 0 2px 2px;
+    max-width: 4rem;
+    min-width: 2rem;
+    position:absolute;
+    top: 0;
+    transition: .25s;
+    width: 10%;
 }
-.botao__produto {
+
+.botao-delete::after {
+    content: "X";
+
+}
+.botao-delete:hover {
+    background-color: rgb(211, 118, 118);
+    border-color: rgb(255, 80, 80);
+    transition: .25s;
+}
+.botao-delete:active {
+    background-color: rgb(109, 0, 0);
+    border-color: black;
+}
+.botao-produto {
     bottom: 0;
     border-radius: 1.5rem;
     height: 3rem;
@@ -29,15 +55,9 @@
     margin-bottom: 1rem;
     width: 70%;
 }
-.botao:active {
-    background-color: var(--cor-principal);
-}
-.botao:hover {
-    box-shadow: 0 .2rem .2rem rgba(0, 0, 0, 0.5) ;
-    transition: .5s;
-}
 
-.botao__produto:hover {
+.botao-produto:hover {
+    box-shadow: 0 .2rem .2rem rgba(0, 0, 0, 0.5) ;
     animation-name: animaBotao;
     animation-duration: .75s;
 }
@@ -59,14 +79,11 @@
 
 @media screen and (min-width: 1024px) {
     
-    .botao__despesa {
-        width: 100%;
-    }
 }
 @media screen and (min-width: 1400px) {
-    .botao__despesa {
+    .botao-despesa {
         position: absolute;
-        margin-top: 2rem;
+        margin-top: 3rem;
     }
 
 }

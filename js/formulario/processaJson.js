@@ -1,14 +1,22 @@
 import { listaDeDespesas } from "./processaDadosDespesas.js";
 
 const inputNomeProduto = document.querySelector('#nome-produto');
-const botaoAdicionarProduto = document.querySelector(".botao__produto");
+const botaoAdicionarProduto = document.querySelector(".botao-produto");
 
-botaoAdicionarProduto.addEventListener("click", ()) => {
-    event.preventDefault();
-    console.log("clicou")
+
+botaoAdicionarProduto.addEventListener("click", () => {
     var nomeProduto = inputNomeProduto.value;
     var somaCustos = obterCustoTotal(listaDeDespesas);
-    criarJsonProdutos(nomeProduto, somaCustos)
+    var jsonObj = criarJsonProdutos(nomeProduto, somaCustos);
+    /*
+    fetch('../../produtos.json', {method: 'post', mode: 'cors', body: JSON.stringify(jsonObj)})
+    .then((response) => {
+        return response.json();
+    }).then((resJsonObj) => {
+        resJsonObj += jsonObj;
+        return resJsonObj.json();
+    })
+    */
 })
 function obterCustoTotal(listaDeDespesas) {
     var soma;
@@ -23,7 +31,7 @@ function criarJsonProdutos(nomeProduto, custoTotal) {
         "nome": nomeProduto,
         "custo" : custoTotal
     }
-    
+    return objeto;
 }
 /*
 [

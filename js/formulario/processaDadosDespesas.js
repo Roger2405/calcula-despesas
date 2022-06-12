@@ -1,5 +1,48 @@
 
-export var listaDeDespesas = [];
+export var listaDeDespesas = [
+    {
+        "nome": "Açúcar",
+        "tipo": "ingrediente",
+        "precoUnitario": 3.40,
+        "quantidadePorProduto": 0.147,
+        "custoPorProduto": 0.50
+    },
+    {
+        "nome": "Morango",
+        "tipo": "ingrediente",
+        "precoUnitario": 10.00,
+        "quantidadePorProduto": 0.293,
+        "custoPorProduto": 2.93
+    },
+    {
+        "nome": "Vidro",
+        "tipo": "embalagem",
+        "precoUnitario": 3.40,
+        "quantidadePorProduto": 0.147,
+        "custoPorProduto": 0.50
+    },
+    {
+        "nome": "Uva",
+        "tipo": "ingrediente",
+        "precoUnitario": 10.00,
+        "quantidadePorProduto": 0.293,
+        "custoPorProduto": 2.93
+    },
+    {
+        "nome": "Tampa",
+        "tipo": "embalagem",
+        "precoUnitario": 3.40,
+        "quantidadePorProduto": 0.147,
+        "custoPorProduto": 0.50
+    },
+    {
+        "nome": "Pacote",
+        "tipo": "embalagem",
+        "precoUnitario": 10.00,
+        "quantidadePorProduto": 0.293,
+        "custoPorProduto": 2.93
+    }
+];
 var precoUnitario;
 var quantidadePorProduto;
 var custoPorProduto;
@@ -16,6 +59,7 @@ export function processarDados(nomeDespesa, tipoDespesa, quantidadeUtilizada, qu
     atualizaTabela(listaDeDespesas);
 }
 
+atualizaTabela(listaDeDespesas);
 function criaObjetoDespesa(nomeDespesa, tipoDespesa, precoUnitario, quantidadePorProduto, custoPorProduto){
     var objetoDespesa = {
         nome: nomeDespesa,
@@ -25,6 +69,13 @@ function criaObjetoDespesa(nomeDespesa, tipoDespesa, precoUnitario, quantidadePo
         custoPorProduto: custoPorProduto
     }
     listaDeDespesas.push(objetoDespesa);
+
+    listaDeDespesas.forEach((despesa) => {
+        console.log(despesa.nome);
+        console.log(despesa.precoUnitario);
+        console.log(despesa.quantidadePorProduto);
+        console.log(despesa.custoPorProduto);
+    })
 }
 
 function atualizaTabela(listaDeDespesas) {
@@ -41,8 +92,9 @@ function atualizaTabela(listaDeDespesas) {
     listaDeDespesas.forEach(despesa => {
         const tabelaLinha = document.createElement('tr');
         tabelaLinha.classList.add('tabela__linha');
+        //Cria botão delete
         
-        criarElementoNaLinha(despesa.nome, tabelaLinha);
+        criarCelulaNomeEBotaoDelete(despesa.nome, tabelaLinha);
         criarElementoNaLinha(formatar(despesa.precoUnitario), tabelaLinha);
         criarElementoNaLinha(despesa.quantidadePorProduto.toFixed(3), tabelaLinha);
         criarElementoNaLinha(formatar(despesa.custoPorProduto), tabelaLinha);
@@ -64,10 +116,46 @@ function atualizaTabela(listaDeDespesas) {
     custoIngredientes.textContent = formatar(somaCustoIngredientes);
     custoEmbalagens.textContent = formatar(somaCustoEmbalagens);
     custoTotal.textContent = formatar(somaCustoIngredientes + somaCustoEmbalagens);
+    verificaBotoesDelete();
+}
+function criarCelulaNomeEBotaoDelete(nomeDaDespesa, tabelaLinha) {
+    var botaoDelete = document.createElement('button');
+    botaoDelete.classList.add('botao-delete');
+    botaoDelete.classList.add('botao');
+    var tdNome = criarElementoNaLinha(nomeDaDespesa, tabelaLinha);
+    tdNome.classList.add('tabela__linha--nome');
+    tdNome.appendChild(botaoDelete);
+}
+function verificaBotoesDelete() {
+    var botoesDelete = document.querySelectorAll('.botao-delete');
+    botoesDelete.forEach(botao => {
+        botao.addEventListener('click', () => {
+            var paiDoBotao = botao.parentNode;
+            var linhaInteira = paiDoBotao.parentNode;
+            linhaInteira.classList.add('removerLinha');
+
+
+            setTimeout(function(){
+                var nomeDaDespesaASerDeletada = botao.parentElement.textContent;
+                listaDeDespesas.forEach(despesa => {
+                    if(despesa.nome == nomeDaDespesaASerDeletada) {
+                        var indice = listaDeDespesas.indexOf(despesa);
+                        listaDeDespesas.splice(indice, 1);
+                    }
+                    atualizaTabela(listaDeDespesas);
+                })
+
+            }, 500);
+
+
+        })
+    })
 }
 function criarElementoNaLinha(valor, tr) {
     const td = document.createElement('td');
     td.textContent = valor;
     
     tr.appendChild(td);
+    return td;
  }
+ /*<td class="td-nomeDespesa"><button class="botao__delete">X</button>Açúcar</td>*/

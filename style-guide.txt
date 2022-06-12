@@ -1,3 +1,14 @@
---cor-principal: #00C2FF;
---cor-secundaria: #CCCCCC;
---cor-linha: #FBFBFB; 95%
+[
+    {
+      "nome": "Geleia de Morango",
+      "custo": 5.50
+    },
+    {
+      "nome": "Geleia de Uva",
+      "custo": 4.50
+    },
+    {
+      "nome": "Geleia de Physalis",
+      "custo": 5.50
+    }
+]

@@ -17,10 +17,16 @@
 }
 
 @media screen and (max-width: 480px) {
-    .tabela__cabecalho--precoUnitario, td:nth-child(2) {
+    .tabela__cabecalho--precoUnitario, td:nth-child(2), .tabela__cabecalho--quantidadePorProduto, td:nth-child(3) {
         display: none;
     }
     .tabela__cabecalho--nome {
         width: calc(100% - 50%/1.5);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .tabela__cabecalho--quantidadePorProduto, td:nth-child(3) {
+        display: none;
     }
 }

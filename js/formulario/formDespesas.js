@@ -21,7 +21,7 @@ var preco;
 var quantidade;
 
 /*BOTÃO SUBMIT*/
-const botaoSubmit = document.querySelector('.botao__despesa');
+const botaoSubmit = document.querySelector('.botao-despesa');
 
 resetarFormulario();
 function resetarFormulario(){

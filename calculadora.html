@@ -60,7 +60,7 @@
                   </div>
                   
                 </div>
-                <button class="botao botao__despesa">Adicionar Despesa</button>
+                <button class="botao botao-despesa" type="button">Adicionar Despesa</button>
               </div>
             </form>
           </div>
@@ -81,8 +81,13 @@
               </thead>
               <tbody>
                 <tr class="tabela__linha">
-                  <td colspan="4">Ainda não foi adicionado nenhum ingrediente</td>
-                </tr>
+                  <!--<td colspan="4">Ainda não foi adicionado nenhum ingrediente</td>-->
+                  <td class="tabela__linha--nome"><button class="botao-delete"></button>Açúcar</td>
+                  <td>R$ 3,40</td>	
+                  <td>0.147</td>	
+                  <td>R$ 0,50</td>
+                  </tr>
+                </div>
               </tbody>
               <tfoot>
                 <td></td>
@@ -130,7 +135,7 @@
           <input class="formulario__campo--input" type="text" id="nome-produto" required>
         </div>
         
-        <button class="botao botao__produto">Adicionar produto</button>
+        <button class="botao botao-produto" type="button">Adicionar produto</button>
       </form>
     </div>
   </main>
@@ -139,5 +144,6 @@
   </footer>
   <script src="./js/formulario/formDespesas.js" type="module"></script>
   <script src="./js/formulario/formProduto.js" type="module"></script>
+  <script src="./js/formulario/processaJson.js" type="module"></script>
 </body>
 </html>

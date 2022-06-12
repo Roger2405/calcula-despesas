@@ -18,8 +18,25 @@
 .tabela__cabecalho {
     background-color: var(--cor-secundaria);
 }
+.tabela__linha--nome {
+    position: relative;
+    width: 100%;
+}
 
+.removerLinha {
+    animation-duration: .5s;
+    animation-name: removerLinhaAnim;
+    transition: .5s;
+}
 
+@keyframes removerLinhaAnim {
+    50% {
+        transform: translateX(-5%) rotateX(45deg );
+    }
+    100% {
+        transform: translateX(100%);
+    }
+}
 
 th {
     border: 1px solid rgb(255, 255, 255);
