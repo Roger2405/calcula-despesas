@@ -7,11 +7,10 @@
     background-color: white;
     border-radius: 0 0 1rem 1rem;
     color: var(--cor-principal);
-    font-size: auto;
     font-weight: 700;
-    height: 3rem;
-    margin-top: 0;
-    width: 100%;
+    height: 4rem;
+    margin: 0 auto;
+    width: 100%;    
 }
 .botao-span{
     position: relative;
@@ -21,9 +20,10 @@
     background-color: rgb(255, 80, 80);
     border: .3rem solid rgb(211, 118, 118);
     color: white;
-    height: calc(100% - 4px);
+    font-size: 2rem;
+    height: calc(100% -  .2rem);
+    margin: .1rem;
     left: 0;
-    margin: 2px 0 2px 2px;
     max-width: 4rem;
     min-width: 2rem;
     position:absolute;
@@ -31,11 +31,10 @@
     transition: .25s;
     width: 10%;
 }
-
 .botao-delete::after {
-    content: "X";
-
+    content: "x";
 }
+
 .botao-delete:hover {
     background-color: rgb(211, 118, 118);
     border-color: rgb(255, 80, 80);
@@ -48,12 +47,13 @@
 .botao-produto {
     bottom: 0;
     border-radius: 1.5rem;
-    height: 3rem;
-    position: fixed;
-    
-    margin: 0 calc((100% - 70%)/2);
+    font-size: 3vh;
+    min-height: 5vh;
+    left: 0;
+    margin: 0 1rem;
     margin-bottom: 1rem;
-    width: 70%;
+    position: fixed;
+    width: calc(100% - 2rem);
 }
 
 .botao-produto:hover {
@@ -71,18 +71,27 @@
         
     }
     100% {
-        transform: scale(1);
+        transform: scale(1.2);
 
     }
 }
 
 
-@media screen and (min-width: 1024px) {
-    
+@media screen and (min-width: 768px) {
+    .botao-produto {
+        margin: 0 25vw;
+        margin-bottom: 1rem;
+        width: 50vw;
+    }
+    .botao-despesa {
+        max-width: 600px;
+        margin: 0 calc((100% - 600px) / 2);
+    }
 }
 @media screen and (min-width: 1400px) {
     .botao-despesa {
         position: absolute;
+        margin: 0;
         margin-top: 3rem;
     }
 

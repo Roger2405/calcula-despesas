@@ -1,24 +1,38 @@
-@import url(./variaveis.css);
+@import url(./_variaveis.css);
 
 body {
     background-color: var(--cor-principal);
-    
+    width: 100vw;
 }
 body * {
     /*font-family: 'Quicksand', sans-serif;*/
     font-family: 'Poppins', sans-serif;
 }
-
-main {
-    background-color: /*var(--azul-principal)*/ black;
+header {
+    height: 10vh;
 }
 
-
+.principal {
+    background-color: var(--azul-principal);
+    margin-top: 10vh;
+    min-height: 70vh;
+    width: 100%;
+}
+footer {
+    height: 20vh;
+}
 .container {
-    background-color: var(--cor-principal);
+    background-image: linear-gradient(45deg, var(--cor-principal), rgb(24, 240, 255));
     padding-top: 4rem;
+    height: max-content;
+    margin: 0 auto;
+    width: 100%;
 }
-
+input {
+    background-color: gray;
+    color: white;
+    border: .5rem solid white;
+}
 /*
 .container {
     align-items: center;
@@ -34,7 +48,7 @@ main {
     .container-principal {
         display: flex;
         flex-direction: row;
-        margin: 0 10vw;
+        margin: 0 10%;
     }
     .formularios {
         border-radius: 1rem;
@@ -47,7 +61,6 @@ main {
         height: min-content;
     }
     .tabelas {
-        margin-top: 1rem;
         flex: 75% 1 1;
     }
 }

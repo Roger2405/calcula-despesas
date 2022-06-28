@@ -1,0 +1,47 @@
+
+.button__nav {
+    justify-content: space-between;
+    display: flex;
+    flex-direction: column;
+    height: 2.5rem;
+    left: 0;
+    margin: 1.25rem;
+    position: absolute;
+    top: 0;
+    width: 3rem;
+    
+}
+.button__nav:hover .button__nav--line:first-child, .button__nav:hover .button__nav--line:last-child {
+    width: 75%;
+} 
+.button__nav:hover .button__nav--line:nth-child(2) {
+    width: 100%;
+}
+.button__nav:hover .button__nav--line{
+    background-color: white;
+    transition: .25s;
+}
+.button__nav--line {
+    background-color: black;
+    border-radius: 1rem;
+    height: .35rem;
+    widht: 100%;
+    transition: .25s;
+}
+.button__nav--line:nth-child(2) {
+    width: 75%;
+}
+
+.button__nav:active div{
+    position:absolute;
+}
+.button__nav:active .button__nav--line:first-child {
+    width: 100%;
+    transition: rotateZ(45deg);
+}
+.button__nav:active .button__nav--line:last-child {
+    width: 100%;
+} 
+.button__nav:active .button__nav--line:nth-child(2) {
+    opacity: 0;
+}

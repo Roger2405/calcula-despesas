@@ -1,10 +1,7 @@
-.tabelas {
-    background-color: var(--cor-principal);
-    padding: 0 .5rem;
-}
 
 .tabela__titulo {
     color: white;
+    margin: 0;
     margin-right: auto;
     text-transform: uppercase;
     
@@ -47,9 +44,9 @@ th {
 }
 tbody tr {
     background-color: rgba(255, 255, 255, 0.95);
-    height: 2rem;
+    height: 4rem;
 }
-tr:nth-child(2n) {
+tbody tr:nth-child(2n) {
     background-color: var(--cor-linha);
 }
 

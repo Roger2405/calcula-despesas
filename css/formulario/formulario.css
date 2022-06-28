@@ -1,6 +1,5 @@
 .formularios {
     padding-top: 2rem;
-    background-color: var(--cor-principal); 
 }
 .formulario {
     box-sizing: border-box;
@@ -43,7 +42,7 @@
 /*------------------------*/
 
 .formulario__tipo {
-    height: 150px;
+    height: 120px;
     transition: .25s;
     transform: scaleY(1);
 }
@@ -98,6 +97,8 @@ select.formulario__campo--input {
     display: none;
 }
 .formulario__nome-produto{
+    padding: 2rem 0;
+    margin-top: auto;
     margin-bottom: 5rem;
 }
 .container-principal ~ .formulario__campo label{
