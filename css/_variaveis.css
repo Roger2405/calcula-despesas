@@ -1,12 +1,6 @@
 :root {
-    /*
-    --azul-escuro: rgb(94, 173, 184);
-    --fundo-body: rgb(0, 47, 61);
-    --azul-principal: rgb(0, 174, 255);
-    --vermelho-escuro: rgb(184, 94, 94);*/
-    
-    --cor-principal: rgb(0, 194, 255);
-    --cor-secundaria: #CCCCCC;
-    --cor-linha: rgb(255, 255, 255, 0.8);
-    --cor-gradiente: rgb(255, 255, 255);
+    --cor-principal: #00A7E5;
+    --cor-fundo: #00324B;
+    --cor-secundaria: #505050;
+    --cor-linha: rgb(255, 255, 255, 0.9);
 }

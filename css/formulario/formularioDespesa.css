@@ -1,0 +1,75 @@
+#formulario__quantidadeProdutos {
+    box-shadow: 0 .2rem .4rem rgba(0, 0, 0, 0.6);
+    border-bottom: .1rem solid white;
+    line-height: 1rem;
+    font-size: 1rem;
+    padding: .5rem;
+    width: calc(100% - 2rem);
+}
+#formulario__quantidadeProdutos label {
+    margin-right: 1rem;
+}
+#quantidade-produtos {
+    width: 20%;
+    min-width: 5rem;
+}
+/*------------------------*/
+
+
+
+.formulario__campo--input {
+    width: 50%;
+    border: none;
+    padding: .5rem;
+}
+select.formulario__campo--input {
+    border-radius: 2rem;
+    background-color: var(--cor-secundaria);
+    color: white;
+}
+
+#label-preco {
+    width: 50%;
+}
+.preco-quantidade__div {
+    display: flex;
+}
+.preco-quantidade__div label {
+    flex: 50% 1 1;
+}
+.preco-quantidade__div div {
+    flex: 50% 1 1;
+    display: flex;
+    justify-content: space-between;
+}
+.preco-quantidade__div div input {
+    width: calc(50% - .25rem);
+}
+
+
+
+.mensagem-erro {
+    background-color: white;
+    border-radius: .25rem;
+    color: red;
+    display: inline-block;
+    padding: .1rem;
+    position: absolute;
+    transform: translateY(-40px);
+}
+.mensagem-erro-oculta {
+    display: none;
+}
+
+.botao-despesa {
+    background-color: var(--cor-principal);
+    box-shadow: 0 0 1rem #000;
+    color: #FFF;
+    font-size: 1.75rem;
+    text-shadow: 0 .25rem .25rem #00000060; 
+    font-weight: 700;
+    min-height: 3rem;
+    height: auto;
+    margin: 0 auto;
+    width: calc(100% - 2rem);
+}

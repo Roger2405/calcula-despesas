@@ -43,8 +43,8 @@ th {
     line-height: 1rem;
 }
 tbody tr {
-    background-color: rgba(255, 255, 255, 0.95);
-    height: 4rem;
+    background-color: #FFF;
+    height: 2rem;
 }
 tbody tr:nth-child(2n) {
     background-color: var(--cor-linha);
