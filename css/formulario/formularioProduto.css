@@ -1,5 +1,36 @@
+.formularioProduto{
+    background-color: var(--cor-secundaria);
+}
+
 .formulario__nome-produto{
-    padding: 2rem 0;
-    margin-top: auto;
-    margin-bottom: 5rem;
+    padding-top: 2rem;
+    padding-bottom: 5rem;
+}
+
+.botao-produto {
+    background-color: #FFFFFF;
+    bottom: 0;
+    
+    color: var(--cor-principal);
+    font-size: 2rem;
+    font-weight: 700;
+    height: 4rem;
+    left: 0;
+    position: fixed;
+    text-shadow: 0 0 black, -1px -1px #444;
+    width: 100%;
+}
+
+.botao-produto:hover {
+    box-shadow: 0 .2rem .2rem rgba(0, 0, 0, 0.5) ;
+}
+
+@media screen and (min-width: 1400px) {
+    .botao-produto {
+        position: relative;
+    }
+    .formulario__nome-produto {
+        padding: 0;
+        border-radius: 0 2rem 2rem 0;
+    }
 }

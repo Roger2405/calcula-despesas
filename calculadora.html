@@ -41,112 +41,100 @@
   </div>
 </header>
 <main class="principal">
-  <div class="container">
-    <div class="container-principal">
-      <div class="formularios">
-        <div>
-          <div class="formulario__campo" id="formulario__quantidadeProdutos">
-            <span class="mensagem-erro mensagem-erro-oculta">Este campo não pode ficar vazio</span>
-            <label for="quantidade-produtos">Total de produtos feitos com o elemento abaixo:</label>
-            <input class="formulario__campo--input" type="number" id="quantidade-produtos" required autofocus>
-          </div>
-          <!--**************FORMULÁRIO**************-->
-          <form class="formulario">
-            <div class="formulario__campo">
-              <label for="nome-despesa">Nome da despesa: </label>
-              <input class="formulario__campo--input" type="text" id="nome-despesa" placeholder="Nome" required>
-            </div>
-            <div class="formulario__campo">
-              <label for="tipo-despesa">Tipo da despesa: </label>
-              <select class="formulario__campo--input" name="tipo" id="tipo-despesa">
-                <option>Selecione...</option>
-                <option value="ingrediente">Ingrediente</option>
-                <option value="embalagem">Embalagem</option>
-              </select>
-            </div>
-            <!--FORMULÁRIO TIPO-->
-            <div class="formulario__tipo formulario-inativo">          
-              <div class="formulario__campo">
-                <label for="quantidade">Quantidade utilizada: </label>
-                <input class="formulario__campo--input" type="text" pattern="[\d]+" id="quantidade-usada" data-tipo="quantidade-usada" placeholder="Quantidade utilizada">
-              </div>
-              <div class="formulario__campo preco-quantidade__div">
-                <label for="preco" id="label-preco">Preço/Quantidade</label>
-                <div>
-                  <input class="formulario__campo--input" type="text" id="preco" data-tipo="preco" placeholder="Preço" required>
-                  <input class="formulario__campo--input" type="number" id="quantidade-preco" data-tipo="quantidade-preco" placeholder="1">
-                </div> 
-              </div>
-              <button class="botao botao-despesa" type="button">Adicionar Despesa</button>
-            </div>
-          </form>
-        </div>
-        
-      </div>
-      <!--TABELAS-->
-      <div class="tabelas">
-        <div>
-          <table class="tabela tabela__ingredientes">
-            <h3 class="tabela__titulo">Ingredientes</h3>
-            <thead>
-              <tr class="tabela__cabecalho">
-                <th class="tabela__cabecalho--nome">Nome do Ingrediente</th>
-                <th class="tabela__cabecalho--precoUnitario">Preço unitário</th>
-                <th class="tabela__cabecalho--quantidadePorProduto">Qtd. por Produto</th>
-                <th class="tabela__cabecalho--custoPorProduto">Custo por Produto</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr class="tabela__linha">
-                <!--<td colspan="4">Ainda não foi adicionado nenhum ingrediente</td>-->
-                <td class="tabela__linha--nome"><button class="botao-delete"></button>Açúcar</td>
-                <td>R$ 3,40</td>	
-                <td>0.147</td>	
-                <td>R$ 0,50</td>
-              </tr>
-            </div>
-          </tbody>
-          <tfoot>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td class="custo" id="custo-ingredientes"> R$ 0,00</td>
-          </tfoot>
-        </table> 
-        <table class="tabela tabela__embalagens">
-          <h3 class="tabela__titulo">Embalagens</h3>
-          <thead class="tabela__cabecalho">
-            <tr>
-              <th class="tabela__cabecalho--nome">Nome da Embalagem</th>
-              <th class="tabela__cabecalho--precoUnitario">Preço unitário</th>
-              <th class="tabela__cabecalho--quantidadePorProduto">Qtd. por Produto</th>
-              <th class="tabela__cabecalho--custoPorProduto">Custo por Produto</th>
-            </tr>
-          </thead>
-          <tbody >
-            <tr class="tabela__linha">
-              <td colspan="4">Ainda não foi adicionado nenhuma embalagem</td>
-            </tr>
-          </tbody>
-          <tfoot>
-            <tr>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td class="custo" id="custo-embalagens"> R$ 0,00</td>
-            </tr>
-          </tfoot>
-          
-        </table>
-        
-      </div>
+  <!--**************FORMULÁRIO**************-->
+  <form class="formularioDespesa">
+    <div class="formulario__campo" id="formulario__quantidadeProdutos">
+      <span class="mensagem-erro mensagem-erro-oculta">Este campo não pode ficar vazio</span>
+      <label for="quantidade-produtos">Total de produtos feitos com o elemento abaixo:</label>
+      <input class="formulario__campo--input" type="number" id="quantidade-produtos" required autofocus>
     </div>
+    <div class="formulario__campo">
+      <label for="nome-despesa">Nome da despesa: </label>
+      <input class="formulario__campo--input" type="text" id="nome-despesa" placeholder="Nome" required>
+    </div>
+    <div class="formulario__campo">
+      <label for="tipo-despesa">Tipo da despesa: </label>
+      <select class="formulario__campo--input" name="tipo" id="tipo-despesa">
+        <option>Selecione...</option>
+        <option value="ingrediente">Ingrediente</option>
+        <option value="embalagem">Embalagem</option>
+      </select>
+    </div>
+    <!--FORMULÁRIO TIPO-->
+    <div class="formulario__tipo formulario-inativo">          
+      <div class="formulario__campo">
+        <label for="quantidade">Quantidade utilizada: </label>
+        <input class="formulario__campo--input" type="text" pattern="[\d]+" id="quantidade-usada" data-tipo="quantidade-usada" placeholder="Quantidade utilizada">
+      </div>
+      <div class="formulario__campo preco-quantidade__div">
+        <label for="preco" id="label-preco">Preço/Quantidade</label>
+        <div>
+          <input class="formulario__campo--input" type="text" id="preco" data-tipo="preco" placeholder="Preço" required>
+          <input class="formulario__campo--input" type="number" id="quantidade-preco" data-tipo="quantidade-preco" placeholder="1">
+        </div> 
+      </div>
+      <button class="botao botao-despesa" type="button">Adicionar Despesa</button>
+    </div>
+  </form>
+  <!--TABELAS-->
+  <div class="tabelas">
+    <table class="tabela tabela__ingredientes">
+      <h3 class="tabela__titulo">Ingredientes</h3>
+      <thead>
+        <tr class="tabela__cabecalho">
+          <th class="tabela__cabecalho--nome">Nome do Ingrediente</th>
+          <th class="tabela__cabecalho--precoUnitario">Preço unitário</th>
+          <th class="tabela__cabecalho--quantidadePorProduto">Qtd. por Produto</th>
+          <th class="tabela__cabecalho--custoPorProduto">Custo por Produto</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="tabela__linha">
+          <!--<td colspan="4">Ainda não foi adicionado nenhum ingrediente</td>-->
+          <td class="tabela__linha--nome"><button class="botao-delete"></button>Açúcar</td>
+          <td>R$ 3,40</td>	
+          <td>0.147</td>	
+          <td>R$ 0,50</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td class="custo" id="custo-ingredientes"> R$ 0,00</td>
+      </tfoot>
+    </table> 
+    <table class="tabela tabela__embalagens">
+      <h3 class="tabela__titulo">Embalagens</h3>
+      <thead class="tabela__cabecalho">
+        <tr>
+          <th class="tabela__cabecalho--nome">Nome da Embalagem</th>
+          <th class="tabela__cabecalho--precoUnitario">Preço unitário</th>
+          <th class="tabela__cabecalho--quantidadePorProduto">Qtd. por Produto</th>
+          <th class="tabela__cabecalho--custoPorProduto">Custo por Produto</th>
+        </tr>
+      </thead>
+      <tbody >
+        <tr class="tabela__linha">
+          <td colspan="4">Ainda não foi adicionado nenhuma embalagem</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td class="custo" id="custo-embalagens"> R$ 0,00</td>
+        </tr>
+      </tfoot>
+      
+    </table>
   </div>
   <div class="soma-custos">
     <p>Custo total do produto: </p>
     <p id="custo-total">R$ 0,00</p>
   </div>
-  <form action="">
+  <form class="formularioProduto" action="">
     <div class="formulario__campo formulario__nome-produto">
       <label for="nome-produto">Nome do produto</label>
       <input class="formulario__campo--input" type="text" id="nome-produto" required>
@@ -154,7 +142,6 @@
     
     <button class="botao botao-produto" type="button">Adicionar produto</button>
   </form>
-</div>
 </main>
 <footer>
   

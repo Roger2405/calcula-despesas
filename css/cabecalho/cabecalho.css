@@ -6,6 +6,7 @@
     top: 0;
     text-align: center;
     width: 100vw;
+    
     z-index: 15;
 }
 .cabecalho__titulo {
@@ -15,4 +16,5 @@
     /*max-width: 300px;*/
     text-transform: uppercase;
     margin: auto 0;
+    
 }

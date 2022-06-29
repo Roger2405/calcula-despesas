@@ -1,8 +1,7 @@
 @import url(./_variaveis.css);
 
 body {
-    background-color: var(--cor-principal);
-    width: 100vw;
+    background-color: var(--cor-fundo); 
 }
 body * {
     /*font-family: 'Quicksand', sans-serif;*/
@@ -12,23 +11,20 @@ header {
     height: 10vh;
 }
 
-.principal {
+main {
     margin-top: 10vh;
-    min-height: 70vh;
     width: 100%;
+    background-color: var(--cor-principal);
 }
-.formularios {
+form {
     background-color: var(--cor-secundaria);
 }
 footer {
-    height: 20vh;
 }
-.container {
-    height: max-content;
-    margin: 0 auto;
-    width: 100%;
-}
+
 .tabelas {
+    min-height: 70vh;
+    
     margin: .75rem;
 }
 input {
@@ -47,14 +43,38 @@ input {
 
 
 @media  screen and (min-width:1400px) {
-    
-    .container-principal {
-        display: flex;
-        flex-direction: row;
-        margin: 0 10%;
+    .soma-custos {
+        grid-area: custo;
     }
-    .formularios {
-        border-radius: 1rem;
+    .formularioDespesa {
+        grid-area: formDespesa;
+        background-image: linear-gradient(180deg, var(--cor-fundo), var(--cor-secundaria));
+    }
+    .formularioProduto {
+        grid-area: formProduto;
+        background-image: linear-gradient(0deg, var(--cor-fundo), var(--cor-secundaria) 25%);
+
+    }
+    .formularioDespesa,
+    .formularioProduto {
+        box-shadow: none;
+        margin: 0;
+    }
+    
+    main {
+        background-color: var(--cor-secundaria);
+        margin-right: 5rem;
+        margin-left: 5rem;
+        width: calc(100% - 10rem);
+        display: grid;
+        grid-template-columns: 1fr 4fr;
+        grid-template-areas: "formDespesa tabelas"
+                            "formProduto custo";
+
+    }
+    form {
+        width: 100%;
+        height: 100%;
         box-shadow: 0 0 .5rem rgba(0, 0, 0, 0.5);
         flex: 25% 1 1;
         margin: 0 1rem;
@@ -64,6 +84,9 @@ input {
         height: min-content;
     }
     .tabelas {
+        margin: 0;
+        background-color: var(--cor-principal);
         flex: 75% 1 1;
+        grid-area: "tabelas";
     }
 }
