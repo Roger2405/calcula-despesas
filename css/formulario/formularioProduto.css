@@ -2,7 +2,7 @@
     background-color: var(--cor-secundaria);
 }
 
-.formulario__nome-produto{
+.formularioProduto__nome{
     padding-top: 2rem;
     padding-bottom: 5rem;
 }
@@ -10,7 +10,6 @@
 .botao-produto {
     background-color: #FFFFFF;
     bottom: 0;
-    
     color: var(--cor-principal);
     font-size: 2rem;
     font-weight: 700;
@@ -28,9 +27,9 @@
 @media screen and (min-width: 1400px) {
     .botao-produto {
         position: relative;
+        border-radius: 0 5rem 5rem 0;
     }
-    .formulario__nome-produto {
+    .formularioProduto__nome {
         padding: 0;
-        border-radius: 0 2rem 2rem 0;
     }
 }

@@ -3,7 +3,7 @@
     backdrop-filter: saturate(180%) blur(10px);
     box-shadow: 10rem 0 0 rgba(0, 0, 0, 0.5);
     position: fixed;
-    top: 6rem;
+    top: var(--altura-cabecalho);
     width: 80vw;
     height: 100vh;
     transition: .5s;
