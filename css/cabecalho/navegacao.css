@@ -1,0 +1,30 @@
+.navigation {
+    background-color: rgba(255, 255, 255, 0.8);
+    backdrop-filter: saturate(180%) blur(10px);
+    box-shadow: 10rem 0 0 rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 6rem;
+    width: 80vw;
+    height: 100vh;
+    transition: .5s;
+
+    z-index: 5;
+}
+
+.navigation-hide {
+    box-shadow: none;
+    transform: translateX(-100%);
+
+    transition: .5s;
+}
+
+
+.navigation__item {
+    border-bottom: 2px dashed var(--cor-principal);
+    display: block;
+    margin: 3rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: var(--cor-principal);
+    font-weight: 700;
+}
