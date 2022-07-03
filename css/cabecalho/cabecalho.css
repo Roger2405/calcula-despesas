@@ -3,6 +3,7 @@
     box-shadow: 0 .25rem .5rem rgba(0, 0, 0, 0.15);
     padding: 1rem 0;
     position: fixed;
+    height: var(--altura-cabecalho);
     top: 0;
     text-align: center;
     width: 100vw;

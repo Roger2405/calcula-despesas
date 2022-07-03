@@ -1,44 +1,73 @@
 
 .button__nav {
+    height: var(--altura-cabecalho);
     justify-content: space-between;
-    display: flex;
-    flex-direction: column;
-    height: 2.25rem;
-    left: 0;
-    margin: .5rem 1.5rem;
-    top: 0;
-    width: 3rem;
+    margin-left: 1rem;
     position: fixed;
+    top: 0;
+    width: var(--altura-cabecalho);
 }
-.button__nav-effects.button__nav:hover 
-.button__nav--line:not(#middle-line) {
-    width: 75%;
-} 
+#top-line {
+    top: calc(0% + var(--margemBotao));
+    width: 70%;
+}
+#middle-line {
+    top: calc(50% - var(--altura-linhaBotao)/2);
+    width: 50%;
+}
+#bottom-line {
+    top: calc(100% - var(--altura-linhaBotao) - var(--margemBotao));
+    width: 70%;
+}
+
 .button__nav:hover #middle-line {
-    width: 100%;
+    width: 75%;
+}
+.button__nav:hover #top-line,
+.button__nav:hover #bottom-line {
+    width: 50%;
 }
 .button__nav:hover .button__nav--line{
     background-color: white;
-    transition: .25s;
 }
+
+
 .button__nav--line {
-    background-color: var(--cor-fundo);
+    background-color: white;
     border-radius: 1rem;
-    height: .3rem;
-    width: 100%;
+    position: absolute;
+    left: 0;
+    height: var(--altura-linhaBotao);
     transition: .5s;
 }
-#middle-line {
-    width: 75%;
+.botao__close .linha:first-child{
+    transform: rotateZ(-45deg);
 }
-.button__nav-active{
-    display: inline-block;
+.botao__close .linha:nth-child(2) {
+    transform: scale(0);
+    opacity: 0;
 }
-.button__nav-active .button__nav--line:first-child {
-    transform: rotate(45deg) scaleX(0.85);
+.botao__close .linha:last-child {
+    top: calc(50% - var(--altura-da-linha));
+    transform: rotateZ(45deg);
 }
-.button__nav-active .button__nav--line:last-child {
-    transform: rotate(135deg) scaleX(0.85);
+
+
+.button__nav-active #top-line,
+.button__nav-active #bottom-line {
+    top: calc(50% - var(--altura-linhaBotao));
+    translate: scale(0.85);
+}
+
+
+
+.button__nav-active #top-line {
+    transform: rotate(-45deg);
+}
+
+
+.button__nav-active #bottom-line {
+    transform: rotate(45deg);
 } 
 .button__nav-active .button__nav--line {
     top: 50%;

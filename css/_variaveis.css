@@ -4,4 +4,7 @@
     --cor-secundaria: #505050;
     --cor-linha: rgb(255, 255, 255, 0.9);
 
+    --altura-cabecalho: 5rem;
+    --altura-linhaBotao: .25rem;
+    --margemBotao: 1rem;
 }
