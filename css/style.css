@@ -1,7 +1,9 @@
 @import url(./_variaveis.css);
 
 body {
-    background-color: var(--cor-fundo); 
+    /*background-color: var(--cor-fundo); */
+    background: url(../assets/img/bgImage.svg) no-repeat;
+    background-size: cover;
 }
 body * {
     /*font-family: 'Quicksand', sans-serif;*/
@@ -12,14 +14,16 @@ header {
 }
 
 main {
-    margin-top: calc(var(--altura-cabecalho) + 1.5rem);
+    margin-top: calc(var(--altura-cabecalho));
     width: 100%;
     background-color: var(--cor-principal);
 }
 form {
-    background-color: var(--cor-secundaria);
+    background-color: var(--cor-fundo);
 }
 footer {
+    height: 15vh;
+    background-color: var(--cor-fundo);
 }
 
 .tabelas {
@@ -27,33 +31,26 @@ footer {
     
     margin: .75rem;
 }
+.formularioDespesa {
+    padding-top: 1.5rem;
+}
 input {
     background-color: gray;
     color: white;
     border: .5rem solid white;
 }
-/*
-.container {
-    align-items: center;
-    display: flex;
-    padding: 1rem;
-    flex-direction: column;
-}
-*/
-
 
 @media  screen and (min-width:1400px) {
     .soma-custos {
         grid-area: custo;
     }
     .formularioDespesa {
-        grid-area: formDespesa;
-        background-image: linear-gradient(180deg, var(--cor-fundo), var(--cor-secundaria));
+        grid-area: formDespesa;/*
+        background-image: linear-gradient(180deg, var(--cor-fundo), var(--cor-secundaria));*/
         height: 100%;
     }
     .formularioProduto {
         grid-area: formProduto;
-        background-image: linear-gradient(0deg, var(--cor-fundo), var(--cor-secundaria) 50%);
     }
     .formularioDespesa,
     .formularioProduto {
@@ -86,7 +83,6 @@ input {
     }
     .tabelas {
         margin: 0;
-        background-color: var(--cor-principal);
         flex: 75% 1 1;
         grid-area: "tabelas";
     }

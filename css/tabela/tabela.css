@@ -1,6 +1,7 @@
 
 .tabela__titulo {
     color: white;
+    text-shadow: 0 .1rem .25rem black;
     margin: 0;
     margin-right: auto;
     text-transform: uppercase;

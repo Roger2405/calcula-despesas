@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080.012" viewBox="0 0 1920 1080.012">
+  <g id="bgImage" transform="translate(10.407 11.876)">
+    <g id="bgBody" transform="translate(-10.407 -11.876)" fill="#00324b">
+      <path d="M 1919.5 1079.499877929688 L 0.49993896484375 1079.499877929688 L 0.49993896484375 0.5001160502433777 L 1919.5 0.5001160502433777 L 1919.5 1079.499877929688 Z" stroke="none"/>
+      <path d="M 0.9998779296875 0.9998779296875 L 0.9998779296875 1078.999633789062 L 1919 1078.999633789062 L 1919 0.9998779296875 L 0.9998779296875 0.9998779296875 M -0.0001220703125 -0.0001220703125 L 1920 -0.0001220703125 L 1920 1079.999633789062 L -0.0001220703125 1079.999633789062 L -0.0001220703125 -0.0001220703125 Z" stroke="none" fill="#000"/>
+    </g>
+    <path id="Caminho_11" data-name="Caminho 11" d="M1905.636,571.979V78.106H-12Z" transform="translate(1.593 -89.982)" fill="rgba(255,255,255,0.99)"/>
+    <path id="Caminho_9" data-name="Caminho 9" d="M1915.266,1124.612h-1920l1920-1080Z" transform="translate(-5.673 -56.488)" fill="rgba(3,187,255,0.82)"/>
+    <path id="Caminho_12" data-name="Caminho 12" d="M-4.734-6.4v1080H652.7Z" transform="translate(-5.673 -5.473)" fill="#fff"/>
+    <path id="Caminho_14" data-name="Caminho 14" d="M521.053-.437,1921.88,1078V-2Z" transform="translate(-12.286 -9.876)" fill="rgba(0,50,75,0.61)"/>
+    <path id="Caminho_15" data-name="Caminho 15" d="M647.041,1068.136,799.061-11.876H-10.407Z" fill="rgba(255,255,255,0.36)"/>
+  </g>
+</svg>
