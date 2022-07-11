@@ -10,7 +10,7 @@ body * {
     font-family: 'Poppins', sans-serif;
 }
 header {
-    height: 10vh;
+    height: var(--altura-cabecalho);
 }
 
 main {
@@ -68,7 +68,7 @@ input {
         grid-template-columns: 1fr 4fr;
         grid-template-areas: "formDespesa tabelas"
                             "formProduto custo";
-
+        min-height: calc(100vh - var(--altura-cabecalho));
     }
     form {
         width: 100%;
@@ -78,7 +78,7 @@ input {
         margin: 0 1rem;
         margin-top: 1rem;
         min-width: 400px;
-        max-width: 500px;
+        /*max-width: 500px;*/
         height: min-content;
     }
     .tabelas {
