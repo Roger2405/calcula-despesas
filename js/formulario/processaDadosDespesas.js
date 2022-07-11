@@ -1,48 +1,5 @@
 
-export var listaDeDespesas = [
-    {
-        "nome": "Açúcar",
-        "tipo": "ingrediente",
-        "precoUnitario": 3.40,
-        "quantidadePorProduto": 0.147,
-        "custoPorProduto": 0.50
-    },
-    {
-        "nome": "Morango",
-        "tipo": "ingrediente",
-        "precoUnitario": 10.00,
-        "quantidadePorProduto": 0.293,
-        "custoPorProduto": 2.93
-    },
-    {
-        "nome": "Vidro",
-        "tipo": "embalagem",
-        "precoUnitario": 3.40,
-        "quantidadePorProduto": 0.147,
-        "custoPorProduto": 0.50
-    },
-    {
-        "nome": "Uva",
-        "tipo": "ingrediente",
-        "precoUnitario": 10.00,
-        "quantidadePorProduto": 0.293,
-        "custoPorProduto": 2.93
-    },
-    {
-        "nome": "Tampa",
-        "tipo": "embalagem",
-        "precoUnitario": 3.40,
-        "quantidadePorProduto": 0.147,
-        "custoPorProduto": 0.50
-    },
-    {
-        "nome": "Pacote",
-        "tipo": "embalagem",
-        "precoUnitario": 10.00,
-        "quantidadePorProduto": 0.293,
-        "custoPorProduto": 2.93
-    }
-];
+export var listaDeDespesas = [];
 var precoUnitario;
 var quantidadePorProduto;
 var custoPorProduto;
