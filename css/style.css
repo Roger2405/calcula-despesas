@@ -27,8 +27,7 @@ footer {
 }
 
 .tabelas {
-    min-height: 70vh;
-    
+    min-height: 40vh;
     margin: .75rem;
 }
 .formularioDespesa {
@@ -56,6 +55,7 @@ input {
     .formularioProduto {
         box-shadow: none;
         margin: 0;
+        height: 100%;
     }
     
     main {
@@ -82,6 +82,7 @@ input {
         height: min-content;
     }
     .tabelas {
+        min-height: 70vh;
         margin: 0;
         flex: 75% 1 1;
         grid-area: "tabelas";

@@ -1,12 +1,13 @@
 :root {
     --cor-principal: #04a4dcbd;/*
     --cor-principal: #00a8e5bd;*/
-    --cor-fundo: #045c84;/*
-    --cor-fundo: #00324b;*/
+    /*--cor-fundo: #045c84;*/
+    --cor-fundo: #00324b;
     --cor-secundaria: #5c7c8c;/*
     --cor-secundaria: #505050;*/
-    --cor-linha: #c4d4d4;/*
-    --cor-linha: rgb(255, 255, 255, 0.9);*/
+    /*--cor-linha: #c4d4d4;
+    */
+    --cor-linha: rgb(255, 255, 255, 0.9);
 
     --altura-cabecalho: 4rem;
     --altura-linhaBotao: .25rem;

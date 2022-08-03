@@ -26,11 +26,13 @@
   <header class="cabecalho">
     <h1 class="cabecalho__titulo"></h1>
     
-    <div class="button__nav butiton__nav-effects">
-      <span class="button__nav--line" id="top-line"></span>
-      <span class="button__nav--line" id="middle-line"></span>
-      <span class="button__nav--line" id="bottom-line"></span>
-    </div>
+    <!--
+      <div class="button__nav butiton__nav-effects">
+        <span class="button__nav--line" id="top-line"></span>
+        <span class="button__nav--line" id="middle-line"></span>
+        <span class="button__nav--line" id="bottom-line"></span>
+      </div>
+    -->
     <nav class="navigation navigation-hide">
       <a class="navigation__item" href="">Produtos</a>
       <a class="navigation__item" href="">Calculadora</a>
@@ -133,13 +135,14 @@
     <p>Custo total do produto: </p>
     <p id="custo-total">R$ 0,00</p>
   </div>
-  <form class="formularioProduto" action="">
+  
+  <form class="formularioProduto formularioProduto--inativo" action="">
     <div class="formulario__campo formularioProduto__nome">
       <label for="nome-produto">Nome do produto</label>
-      <input class="formulario__campo--input" type="text" id="nome-produto" required>
+      <input disabled class="formulario__campo--input" type="text" id="nome-produto" required>
     </div>
     
-    <button class="botao botao-produto" type="button">Adicionar produto</button>
+    <button class="botao botao-produto" type="button"><s>Adicionar produto</s></button>
   </form>
 </main>
 <footer>

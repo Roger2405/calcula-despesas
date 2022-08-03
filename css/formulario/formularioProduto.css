@@ -1,7 +1,12 @@
-
+.formularioProduto {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
 .formularioProduto__nome{
-    padding-top: 2rem;
-    padding-bottom: 5rem;
+    padding-top: 1rem;
+    margin-bottom: 0;
+    padding-bottom: 1rem;
 }
 
 .botao-produto {
@@ -12,7 +17,7 @@
     font-weight: 700;
     height: 4rem;
     left: 0;
-    position: fixed;
+    margin-bottom: 0;
     text-shadow: 0 0 black, -1px -1px #444;
     width: 100%;
     box-shadow: 0 .2rem .2rem rgba(0, 0, 0, 0.5) ;
@@ -23,16 +28,26 @@
 .botao-produto:hover {
     background-color: #444;
     color: white;
-
     transition: .5s;
 }
 
+.formularioProduto--inativo .formularioProduto__nome{
+    color: rgb(145, 145, 145);
+}
+.formularioProduto--inativo .botao-produto {
+    background-color: rgb(145, 145, 145);
+    text-shadow: none;
+    color: rgb(135, 135, 135);
+}
+
 @media screen and (min-width: 1400px) {
-    .botao-produto {
+    .formularioProduto {
         position: relative;
+    }
+    .botao-produto {
         border-radius: 0 5rem 5rem 0;
     }
     .formularioProduto__nome {
-        padding: 0;
+        padding: auto 0;
     }
 }

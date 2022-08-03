@@ -1,5 +1,6 @@
 import { processarDados } from "./processaDadosDespesas.js";
 
+
 var formulario = document.querySelector('form');
 var formularioTipoDiv = document.querySelector('.formulario__tipo');
 var formularioTipoDespesa = document.querySelector('#tipo-despesa');
@@ -25,7 +26,9 @@ const botaoSubmit = document.querySelector('.botao-despesa');
 
 resetarFormulario();
 function resetarFormulario(){
+    //inputNomeDespesa.value = '';
     formulario.reset();
+    inputQuantidadeDeProdutos.value = quantidadeDeProdutos;
     formularioTipoDiv.classList.add('formulario-inativo');
     inputQuantidadeUtilizada.placeholder = `padrão: ${quantidadeDeProdutos}`;
 }
