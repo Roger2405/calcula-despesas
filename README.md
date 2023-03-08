@@ -1,6 +1,5 @@
 # Calculadora de Despesas
 
-![Badge em Desenvolvimento](http://img.shields.io/static/v1?label=STATUS&message=EM%20DESENVOLVIMENTO&color=GREEN&style=for-the-badge)
 
 <p>Esse projeto tem como objetivo proporcionar um cálculo dos custos que estão presentes na confecção de um produto.</p>
 <a href="https://calcula-despesas.vercel.app/"> Link do projeto no Vercel</a> 
